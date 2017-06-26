@@ -27,7 +27,7 @@ class ImageResultList: NSObject {
         self.alternation        = JSON[ImageResultListJSONParsingKeys.kAlternationKey]!.int!
         var tagDatas: [TagName] = []
         for idx in 1 ... 5 {
-            let key             = "\(ImageResultListJSONParsingKeys.kImageIDKey)\(idx)"
+            let key             = "\(ImageResultListJSONParsingKeys.kTagKey)\(idx)"
             let aTagName        = JSON[key]!.string!
             tagDatas.append(aTagName)
         }

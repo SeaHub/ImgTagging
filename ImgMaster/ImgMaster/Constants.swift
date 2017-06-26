@@ -8,6 +8,14 @@
 
 import UIKit
 
-class Constants: NSObject {
+struct ConstantStoryboardSegue {
+    static let kPresentSideMenuViewSegue        = "kPresentSideMenuViewSegue"
+    static let kEmbedNavigationControllerSegue  = "kEmbedNavigationControllerSegue"
+}
 
+struct ConstantStroyboardIdentifier {
+    static let kMainViewControllerIdentifier    = "kMainViewControllerIdentifier"
+    static let kUploadViewControllerIdentifier  = "kUploadViewControllerIdentifier"
+    static let kGalleryViewControllerIdentifier = "kGalleryViewControllerIdentifier"
+    static let kAboutUsViewControllerIdentifier = "kAboutUsViewControllerIdentifier"
 }
