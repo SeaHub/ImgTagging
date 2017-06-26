@@ -370,9 +370,9 @@ class APIManager: NSObject {
     ///   - success: 成功回调函数
     ///   - failure: 失败回调函数
     public class func getImageResult(token: String,
-                                     imageID: String,
-                                     success: ((_ imageResultList: ImageResultList) -> ())?,
-                                     failure: ((_ error: Error) -> ())?) {
+                                   imageID: String,
+                                   success: ((_ imageResultList: ImageResultList) -> ())?,
+                                   failure: ((_ error: Error) -> ())?) {
         
         let headers = [
             "Authorization": "Bearer \(token)"
@@ -410,16 +410,21 @@ class APIManager: NSObject {
                                 failure: ((_ error: Error) -> ())?) {
         
         let headers = [
-            "Authorization": "Bearer \(token)"
+            "Authorization": "Bearer \(token)",
         ]
         
         let imageData          = UIImagePNGRepresentation(image)
         let base64OfImageData  = imageData!.base64EncodedString()
         
-        Alamofire.request("\(kAdminURL)/Image/add?image=\(base64OfImageData)", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200 ..< 300).responseJSON { (response) in
+        let params = [
+            "image": "data:image/png;base64,\(base64OfImageData)"
+        ]
+        
+        Alamofire.request("\(kAdminURL)/Image/add", method: .post, parameters: params, headers: headers).validate(statusCode: 200 ..< 300).responseJSON { (response) in
             
             switch response.result {
-            case .success(_):
+            case .success(let value):
+                debugPrint(JSON(value))
                 if let success = success {
                     success()
                 }

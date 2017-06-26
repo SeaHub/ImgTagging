@@ -218,7 +218,7 @@ class NetworkTests: XCTestCase {
         wait(for: [exception], timeout: kExceptionWaitingTime * 2)
     }
     
-    func testUpdateModel() { // 4th step - UnTest
+    func testUpdateModel() { // 4th step - Server Bug
         let exception = XCTestExpectation(description: "Waiting")
         
         APIManager.login(username: kAdminAccountUsername, password: kAdminAccountPassword, success: { (user) in
@@ -240,7 +240,7 @@ class NetworkTests: XCTestCase {
         wait(for: [exception], timeout: kExceptionWaitingTime * 2)
     }
     
-    func testGetImageResult() { // 5th step - UnTest
+    func testGetImageResult() { // 5th step
         let exception = XCTestExpectation(description: "Waiting")
         
         APIManager.login(username: kAdminAccountUsername, password: kAdminAccountPassword, success: { (user) in
@@ -262,7 +262,7 @@ class NetworkTests: XCTestCase {
         wait(for: [exception], timeout: kExceptionWaitingTime * 2)
     }
     
-    func testUploadImage() { // Ext step - UnTest
+    func testUploadImage() { // Ext step
         let exception = XCTestExpectation(description: "Waiting")
         
         APIManager.login(username: kAdminAccountUsername, password: kAdminAccountPassword, success: { (user) in
