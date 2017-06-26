@@ -14,7 +14,7 @@ struct ConstantStoryboardSegue {
 }
 
 struct ConstantStroyboardIdentifier {
-    static let kMainViewControllerIdentifier    = "kMainViewControllerIdentifier"
+    static let kDigramsViewControllerIdentifier = "kDigramsViewControllerIdentifier"
     static let kUploadViewControllerIdentifier  = "kUploadViewControllerIdentifier"
     static let kGalleryViewControllerIdentifier = "kGalleryViewControllerIdentifier"
     static let kAboutUsViewControllerIdentifier = "kAboutUsViewControllerIdentifier"

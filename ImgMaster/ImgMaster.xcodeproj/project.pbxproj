@@ -12,6 +12,7 @@
 		5230A2441F0169FE0060F99A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5230A2431F0169FE0060F99A /* Main.storyboard */; };
 		5230A2471F016A6A0060F99A /* CircularRevealAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230A2451F016A6A0060F99A /* CircularRevealAnimator.swift */; };
 		5230A2481F016A6A0060F99A /* CircularRevealTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230A2461F016A6A0060F99A /* CircularRevealTransitionAnimator.swift */; };
+		523558151F018AFB003DA55A /* ImgMasterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523558141F018AFB003DA55A /* ImgMasterUtil.swift */; };
 		52355A881EFEBB1500932E34 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52355A871EFEBB1500932E34 /* User.swift */; };
 		52355A8A1EFECC9800932E34 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52355A891EFECC9800932E34 /* UserInfo.swift */; };
 		52355A8C1EFED9C300932E34 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52355A8B1EFED9C300932E34 /* UserDetail.swift */; };
@@ -24,6 +25,10 @@
 		5259B7AA1EFFDA6600B989A3 /* ImageStatisticsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259B7A91EFFDA6600B989A3 /* ImageStatisticsResult.swift */; };
 		527EF12E1EFE4D8D00D3DE79 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527EF12D1EFE4D8D00D3DE79 /* APIManager.swift */; };
 		527EF1321EFE4DA600D3DE79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527EF1311EFE4DA600D3DE79 /* Constants.swift */; };
+		52B2093F1F0181E500E7787B /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2093E1F0181E500E7787B /* ImageUploadViewController.swift */; };
+		52B209411F0181ED00E7787B /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B209401F0181ED00E7787B /* AboutUsViewController.swift */; };
+		52B209431F0181F600E7787B /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B209421F0181F600E7787B /* PhotoGalleryViewController.swift */; };
+		52B209451F01820100E7787B /* DiagramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B209441F01820100E7787B /* DiagramsViewController.swift */; };
 		52D0C4BA1EFE4B1F00E354BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0C4B91EFE4B1F00E354BF /* AppDelegate.swift */; };
 		52D0C4C11EFE4B1F00E354BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D0C4C01EFE4B1F00E354BF /* Assets.xcassets */; };
 		52D0C4C41EFE4B1F00E354BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D0C4C21EFE4B1F00E354BF /* LaunchScreen.storyboard */; };
@@ -51,6 +56,7 @@
 		5230A2431F0169FE0060F99A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5230A2451F016A6A0060F99A /* CircularRevealAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularRevealAnimator.swift; path = ../CircularRevealAnimator.swift; sourceTree = "<group>"; };
 		5230A2461F016A6A0060F99A /* CircularRevealTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularRevealTransitionAnimator.swift; path = ../CircularRevealTransitionAnimator.swift; sourceTree = "<group>"; };
+		523558141F018AFB003DA55A /* ImgMasterUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgMasterUtil.swift; sourceTree = "<group>"; };
 		52355A871EFEBB1500932E34 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52355A891EFECC9800932E34 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		52355A8B1EFED9C300932E34 /* UserDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
@@ -63,6 +69,10 @@
 		5259B7A91EFFDA6600B989A3 /* ImageStatisticsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStatisticsResult.swift; sourceTree = "<group>"; };
 		527EF12D1EFE4D8D00D3DE79 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		527EF1311EFE4DA600D3DE79 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52B2093E1F0181E500E7787B /* ImageUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
+		52B209401F0181ED00E7787B /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		52B209421F0181F600E7787B /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
+		52B209441F01820100E7787B /* DiagramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagramsViewController.swift; sourceTree = "<group>"; };
 		52D0C4B61EFE4B1F00E354BF /* ImgMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D0C4B91EFE4B1F00E354BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52D0C4C01EFE4B1F00E354BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +134,7 @@
 			children = (
 				527EF12D1EFE4D8D00D3DE79 /* APIManager.swift */,
 				527EF1311EFE4DA600D3DE79 /* Constants.swift */,
+				523558141F018AFB003DA55A /* ImgMasterUtil.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -198,6 +209,10 @@
 			isa = PBXGroup;
 			children = (
 				5230A23F1F0169DA0060F99A /* HomeViewController.swift */,
+				52B2093E1F0181E500E7787B /* ImageUploadViewController.swift */,
+				52B209401F0181ED00E7787B /* AboutUsViewController.swift */,
+				52B209421F0181F600E7787B /* PhotoGalleryViewController.swift */,
+				52B209441F01820100E7787B /* DiagramsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -430,11 +445,13 @@
 				527EF12E1EFE4D8D00D3DE79 /* APIManager.swift in Sources */,
 				52F61A2D1F016ACF00E89D27 /* AnimationDelegate.swift in Sources */,
 				5230A2411F0169DA0060F99A /* MenuViewController.swift in Sources */,
+				52B209411F0181ED00E7787B /* AboutUsViewController.swift in Sources */,
 				5259B7AA1EFFDA6600B989A3 /* ImageStatisticsResult.swift in Sources */,
 				52F61A2F1F016B5F00E89D27 /* UITableViewCell.swift in Sources */,
 				5259B7A01EFFCEA900B989A3 /* Image.swift in Sources */,
 				52355A8C1EFED9C300932E34 /* UserDetail.swift in Sources */,
 				52355A8E1EFEDBC800932E34 /* Hobby.swift in Sources */,
+				52B209431F0181F600E7787B /* PhotoGalleryViewController.swift in Sources */,
 				5230A2481F016A6A0060F99A /* CircularRevealTransitionAnimator.swift in Sources */,
 				52D0C4BA1EFE4B1F00E354BF /* AppDelegate.swift in Sources */,
 				5259B7A41EFFD41C00B989A3 /* ImageResultList.swift in Sources */,
@@ -443,8 +460,11 @@
 				527EF1321EFE4DA600D3DE79 /* Constants.swift in Sources */,
 				5259B7A21EFFCFC200B989A3 /* ImageList.swift in Sources */,
 				5259B7A61EFFD77F00B989A3 /* ImageStatisticsResultList.swift in Sources */,
+				52B2093F1F0181E500E7787B /* ImageUploadViewController.swift in Sources */,
 				5230A2421F0169DA0060F99A /* HomeViewController.swift in Sources */,
+				523558151F018AFB003DA55A /* ImgMasterUtil.swift in Sources */,
 				5259B7A81EFFD7B000B989A3 /* Tag.swift in Sources */,
+				52B209451F01820100E7787B /* DiagramsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

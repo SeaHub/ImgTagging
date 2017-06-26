@@ -1,10 +1,13 @@
 platform :ios, '10.0'
+inhibit_all_warnings!
 
 target 'ImgMaster' do
   use_frameworks!
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftyJSON'
   pod 'YALSideMenu', '~> 2.0'
+  pod "BSImagePicker", "~> 2.4"
+  pod 'NVActivityIndicatorView'
 
   target 'ImgMasterTests' do
     inherit! :search_paths

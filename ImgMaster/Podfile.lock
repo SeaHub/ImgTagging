@@ -1,18 +1,30 @@
 PODS:
   - Alamofire (4.5.0)
+  - BSGridCollectionViewLayout (1.2.0)
+  - BSImagePicker (2.6.0):
+    - BSGridCollectionViewLayout (~> 1.2.0)
+    - UIImageViewModeScaleAspect (= 1.5)
+  - NVActivityIndicatorView (3.6.1)
   - SwiftyJSON (3.1.4)
+  - UIImageViewModeScaleAspect (1.5)
   - YALSideMenu (2.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - BSImagePicker (~> 2.4)
+  - NVActivityIndicatorView
   - SwiftyJSON
   - YALSideMenu (~> 2.0)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  BSGridCollectionViewLayout: 8f12c8e1e08c47057f5a39a6828f4395f043d78f
+  BSImagePicker: 7b740d0a9f23160bcdca01f179445583bd1c09b0
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  UIImageViewModeScaleAspect: 11a790a0b9d248a13dc63e3a78991f1463b6d84e
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: 0a6bac88c33faa0a3cb64c2ccb6a1809fa29b161
+PODFILE CHECKSUM: d500e9212c103e623bd9a3b424a43831b8ee5f8f
 
 COCOAPODS: 1.2.1

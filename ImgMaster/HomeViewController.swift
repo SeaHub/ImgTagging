@@ -45,17 +45,13 @@ extension HomeViewController: MenuViewControllerDelegate {
         var currentContentController: UIViewController! = nil
         switch index {
         case 0:
-            currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kMainViewControllerIdentifier)
-            currentContentController.title = "Home"
+            currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kDigramsViewControllerIdentifier)
         case 1:
             currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kUploadViewControllerIdentifier)
-            currentContentController.title = "Upload Image"
         case 2:
             currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kGalleryViewControllerIdentifier)
-            currentContentController.title = "Photo Gallery"
         case 3:
             currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kAboutUsViewControllerIdentifier)
-            currentContentController.title = "About Us"
             
         default:
             debugPrint("Error index \(index)")
