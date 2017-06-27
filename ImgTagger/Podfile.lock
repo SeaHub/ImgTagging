@@ -1,21 +1,27 @@
 PODS:
   - Alamofire (4.5.0)
+  - MOBFoundation (3.0.0)
   - NVActivityIndicatorView (3.6.1)
+  - SMSSDK (3.0.1):
+    - MOBFoundation
   - SwiftyJSON (3.1.4)
   - YALSideMenu (2.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - NVActivityIndicatorView
+  - SMSSDK
   - SwiftyJSON
   - YALSideMenu (~> 2.0)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  MOBFoundation: e6572a62983a44fa048c4038842ade1494c10059
   NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
+  SMSSDK: a811c8ea6e89393097037b7cf6493248a40e50f0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: 3f58b8a2072ce04d4a3dba0d7865e06c63b32749
+PODFILE CHECKSUM: bd648f6d211f0a63121fe178dc053c29b236e1fa
 
 COCOAPODS: 1.2.1
