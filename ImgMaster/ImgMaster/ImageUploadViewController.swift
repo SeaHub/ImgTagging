@@ -16,6 +16,8 @@ class ImageUploadViewController: UIViewController {
     @IBOutlet weak var uploadImageView: UIImageView!
     let indicator = NVActivityIndicatorView(frame: CGRect(x: 100, y: 100, width: 200, height: 100), type: .orbit, color: .white, padding: 0)
     var maskView: UIView?
+    var selectedUploadImages: [UIImage] = []
+    let group                           = DispatchGroup()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,21 +67,26 @@ class ImageUploadViewController: UIViewController {
 
         let imagePickerViewController = BSImagePickerViewController()
         
-        var images: [UIImage] = []
         bs_presentImagePickerController(imagePickerViewController, animated: true, select: nil, deselect: nil, cancel: { (_) in
-            self.indicatorStopAnimating()
+            
+            DispatchQueue.main.async {
+                self.indicatorStopAnimating()
+            }
             
         }, finish: { (assets) in
+
             DispatchQueue.main.async(execute: {
                 for asset in assets {
-                    
                     let aImage   = ImgMasterUtil.getUIImage(asset: asset)
                     if let image = aImage {
-                        images.append(image)
+                        self.selectedUploadImages.append(image)
                     }
                 }
-                debugPrint("Image Total Count: \(images.count)")
-                self.uploadImagesInBackground(images: images, completionHandler: { 
+                
+                self.uploadImagesInBackground(images: self.selectedUploadImages, completionHandler: { (errors) in
+                    if errors.count > 0 {
+                        debugPrint((errors.first)!) // TODO: show msg
+                    }
                     self.indicatorStopAnimating()
                 })
             })
@@ -87,11 +94,33 @@ class ImageUploadViewController: UIViewController {
         }, completion: nil)
     }
     
-    private func uploadImagesInBackground(images: [UIImage], completionHandler:(() -> ())?) {
-        // TODO: Call Network API
-        debugPrint("Upload Image")
-        if let completionHandler = completionHandler {
-            completionHandler()
+    private func uploadImagesInBackground(images: [UIImage], completionHandler:((_ errors: [Error]) -> ())?) {
+        DispatchQueue.global().async {
+            
+            let token           = ImgMasterUtil.userToken!
+            var errors: [Error] = []
+        
+            for image in self.selectedUploadImages {
+                self.group.enter()
+
+                DispatchQueue.main.async {
+                    
+                    APIManager.uploadImage(token: token, image: image, success: {
+                        self.group.leave()
+                    
+                    }, failure: { (error) in
+                        errors.append(error)
+                        self.group.leave()
+                    })
+                }
+
+            }
+            
+            self.group.notify(queue: DispatchQueue.main) {
+                if let completionHandler = completionHandler {
+                    completionHandler(errors)
+                }
+            }
         }
     }
 }

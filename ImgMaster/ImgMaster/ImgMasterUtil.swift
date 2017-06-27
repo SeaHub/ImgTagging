@@ -24,4 +24,8 @@ class ImgMasterUtil: NSObject {
         }
         return img
     }
+    
+    public class var userToken: String! {
+        return UserDefaults.standard.object(forKey: AppConstant.kUserTokenIdentifier) as! String
+    }
 }
