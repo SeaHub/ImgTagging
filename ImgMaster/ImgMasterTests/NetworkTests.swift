@@ -218,12 +218,12 @@ class NetworkTests: XCTestCase {
         wait(for: [exception], timeout: kExceptionWaitingTime * 2)
     }
     
-    func testUpdateModel() { // 4th step - Server Bug
+    func testUpdateModel() { // 4th step
         let exception = XCTestExpectation(description: "Waiting")
         
         APIManager.login(username: kAdminAccountUsername, password: kAdminAccountPassword, success: { (user) in
             
-            APIManager.updateModel(token: user.token, imageID: "1", tagID: "1", success: { 
+            APIManager.updateModel(token: user.token, imageID: "1", tagID: "12", success: {
                 exception.fulfill()
             }, failure: { (error) in
                 exception.fulfill()

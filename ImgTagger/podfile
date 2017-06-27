@@ -1,0 +1,15 @@
+platform :ios, '10.0'
+inhibit_all_warnings!
+
+target 'ImgTagger' do
+  use_frameworks!
+  pod 'Alamofire', '~> 4.4'
+  pod 'SwiftyJSON'
+  pod 'YALSideMenu', '~> 2.0'
+  pod 'NVActivityIndicatorView'
+
+  target 'ImgTaggerTests' do
+    inherit! :search_paths
+  end
+
+end
