@@ -24,7 +24,7 @@ class APIManager: NSObject {
     ///
     /// - Parameters:
     ///   - username: 手机号
-    ///   - password: 密码
+    ///   - password: 密码(6-15位)
     ///   - email: 邮箱（可选）
     ///   - vcode: 验证码
     ///   - success: 成功回调函数
@@ -38,12 +38,12 @@ class APIManager: NSObject {
         let params = [
             "username": username,
             "password": password,
-            "email"   : email ?? "",
+            "email"   : email ?? "seahubc@qq.com",
             "vcode"   : vcode
         ]
         
         Alamofire.request("\(kBaseURL)/register", method: .post, parameters: params, encoding: JSONEncoding.default).validate(statusCode: 200 ..< 300).responseJSON { (response) in
-            
+
             switch response.result {
             case .success(_):
                 if let success = success {
@@ -147,32 +147,31 @@ class APIManager: NSObject {
             }
         }
     }
-    
-    // MARK: - Push Related
-    public class func getServerPushDataSequently(token: String,
-                                           photoNumber: Int,
-                                               success: (() -> ())?,
-                                               failure: ((_ error: Error) -> ())?) {
-        let headers = [
-            "Authorization": "Bearer \(token)"
-        ]
+
+    /// 获取验证码
+    ///
+    /// - Parameters:
+    ///   - phone: 手机号
+    ///   - success: 成功回调函数
+    ///   - failure: 失败回调函数
+    public class func getVCode(phone: String,
+                             success: (() -> ())?,
+                             failure: ((_ error: Error) -> ())?) {
         
-        let params  = [
-            "number": photonNumber
-        ]
-        
-        Alamofire.request("\(kBaseURL)/updateToken", method: .put, parameters: params, headers: headers).validate(statusCode: 200 ..< 300).responseJSON { (response) in
-            switch response.result {
-            case .success(_):
-                if let success = success {
-                    success()
-                }
-            case .failure(let error):
-                debugPrint(error)
+        SMSSDK.getVerificationCode(by: SMSGetCodeMethodSMS, phoneNumber: "18933932386", zone: "86") { (error) in
+            guard error == nil else {
                 if let failure = failure {
-                    failure(error)
+                    failure(error!)
                 }
+                
+                return
+            }
+            
+            if let success = success {
+                success()
             }
         }
     }
+    
+    // MARK: - Push Related - TODO
 }

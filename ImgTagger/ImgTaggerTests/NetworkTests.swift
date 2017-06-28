@@ -13,9 +13,8 @@ import Alamofire
 
 class NetworkTests: XCTestCase {
     let kExceptionWaitingTime = 5.0
-    let kUserAccountUsername = "Admin"   // Need to be filled with
-    let kUserAccountPassword = "123456"  // Need to be filled with
-    
+    let kUserAccountUsername = ""   // Need to fill blanks while testing
+    let kUserAccountPassword = ""   // Need to fill blanks while testing
     
     override func setUp() {
         super.setUp()
@@ -31,6 +30,7 @@ class NetworkTests: XCTestCase {
         
         APIManager.login(username: kUserAccountUsername, password: kUserAccountPassword, success: { (user) in
             exception.fulfill()
+            
         }) { (error) in
             exception.fulfill()
             debugPrint(error.localizedDescription)
@@ -47,6 +47,7 @@ class NetworkTests: XCTestCase {
             
             APIManager.updateToken(token: user.token, success: { 
                 exception.fulfill()
+                
             }, failure: { (error) in
                 exception.fulfill()
                 debugPrint(error.localizedDescription)
@@ -60,5 +61,61 @@ class NetworkTests: XCTestCase {
         }
         
         wait(for: [exception], timeout: kExceptionWaitingTime * 2)
+    }
+    
+    func testGetVcode() { // Need to fill blanks while testing
+        let exception     = XCTestExpectation(description: "Waiting")
+        let registerPhone = ""
+        
+        APIManager.getVCode(phone: registerPhone, success: { 
+            exception.fulfill()
+
+        }) { (error) in
+            exception.fulfill()
+            debugPrint(error.localizedDescription)
+            XCTAssert(false)
+        }
+        
+        wait(for: [exception], timeout: kExceptionWaitingTime)
+    }
+    
+    func testRegister() { // Need to fill blanks while testing
+        let exception     = XCTestExpectation(description: "Waiting")
+        let registerPhone = ""
+        let vcode         = ""
+        
+        APIManager.register(username: registerPhone, password: "", email: nil, vcode: vcode, success: {
+            exception.fulfill()
+            
+        }) { (error) in
+            exception.fulfill()
+            debugPrint(error.localizedDescription)
+            XCTAssert(false)
+        }
+        
+        wait(for: [exception], timeout: kExceptionWaitingTime)
+    }
+    
+    func testLogout() {
+        let exception = XCTestExpectation(description: "Waiting")
+        
+        APIManager.login(username: kUserAccountUsername, password: kUserAccountPassword, success: { (user) in
+            
+            APIManager.logout(token: user.token, success: { 
+                exception.fulfill()
+                
+            }, failure: { (error) in
+                exception.fulfill()
+                debugPrint(error.localizedDescription)
+                XCTAssert(false)
+            })
+            
+        }) { (error) in
+            exception.fulfill()
+            debugPrint(error.localizedDescription)
+            XCTAssert(false)
+        }
+        
+        wait(for: [exception], timeout: kExceptionWaitingTime)
     }
 }

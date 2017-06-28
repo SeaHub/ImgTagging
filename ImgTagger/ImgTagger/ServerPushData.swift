@@ -27,10 +27,10 @@ class ServerPushData: NSObject {
     var updatedAt: String? = nil
     
     init(JSON: Dictionary<String, JSON>) {
-        self.imageID = JSON[ServerPushDataJSONParsingKeys.kImageIDKey]!.int!
-        self.imageURL = JSON[ServerPushDataJSONParsingKeys.kImageURLKey]!.string!
-        self.filename = JSON[ServerPushDataJSONParsingKeys.kFilenamekey]!.string!
-        self.image = Image(JSON: JSON[ServerPushDataJSONParsingKeys.kImageKey]!.dictionary!)
+        self.imageID   = JSON[ServerPushDataJSONParsingKeys.kImageIDKey]!.int!
+        self.imageURL  = JSON[ServerPushDataJSONParsingKeys.kImageURLKey]!.string!
+        self.filename  = JSON[ServerPushDataJSONParsingKeys.kFilenamekey]!.string!
+        self.image     = Image(JSON: JSON[ServerPushDataJSONParsingKeys.kImageKey]!.dictionary!)
         self.createdAt = JSON[ServerPushDataJSONParsingKeys.kCreatedAtKey]!.string
         self.updatedAt = JSON[ServerPushDataJSONParsingKeys.kUpadatedAtKey]!.string
     }

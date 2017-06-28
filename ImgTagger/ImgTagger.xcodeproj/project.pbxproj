@@ -23,8 +23,11 @@
 		52A221A51F02A0A1000E01FA /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A221A41F02A0A1000E01FA /* Tag.swift */; };
 		52A221A71F02A0F2000E01FA /* ServerPushData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A221A61F02A0F2000E01FA /* ServerPushData.swift */; };
 		52A221A91F02A146000E01FA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A221A81F02A146000E01FA /* Image.swift */; };
+		52AF639D1F0349D500CC080F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF639C1F0349D500CC080F /* RegisterViewController.swift */; };
+		52AF639F1F0349DB00CC080F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF639E1F0349DB00CC080F /* LoginViewController.swift */; };
 		52D239B51F0296FA002E0945 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D239B41F0296FA002E0945 /* APIManager.swift */; };
 		52D239B71F029757002E0945 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D239B61F029757002E0945 /* NetworkTests.swift */; };
+		52DFD89E1F03453A00AA7F12 /* ImgTaggerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFD89D1F03453A00AA7F12 /* ImgTaggerUtil.swift */; };
 		52E7B9E01F02985000DF7896 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7B9DF1F02985000DF7896 /* User.swift */; };
 		FB7F755F779BE261E59A9630 /* Pods_ImgTagger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC0D962C324428A4BDABB4A /* Pods_ImgTagger.framework */; };
 /* End PBXBuildFile section */
@@ -61,8 +64,12 @@
 		52A221A41F02A0A1000E01FA /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		52A221A61F02A0F2000E01FA /* ServerPushData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerPushData.swift; sourceTree = "<group>"; };
 		52A221A81F02A146000E01FA /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		52AF639C1F0349D500CC080F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		52AF639E1F0349DB00CC080F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52AF63A01F034BCD00CC080F /* ImgTagger-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImgTagger-Bridging-Header.h"; sourceTree = "<group>"; };
 		52D239B41F0296FA002E0945 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		52D239B61F029757002E0945 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		52DFD89D1F03453A00AA7F12 /* ImgTaggerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgTaggerUtil.swift; sourceTree = "<group>"; };
 		52E7B9DF1F02985000DF7896 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84934CB5131277D51855F715 /* Pods-ImgTaggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgTaggerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImgTaggerTests/Pods-ImgTaggerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86EA894D1878E093EB56261B /* Pods-ImgTagger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgTagger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImgTagger/Pods-ImgTagger.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				5205DA891F029516004DDAE9 /* HomeViewController.swift */,
+				52AF639C1F0349D500CC080F /* RegisterViewController.swift */,
+				52AF639E1F0349DB00CC080F /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 			children = (
 				52D239B41F0296FA002E0945 /* APIManager.swift */,
 				5205DA811F0294F7004DDAE9 /* Constants.swift */,
+				52DFD89D1F03453A00AA7F12 /* ImgTaggerUtil.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -134,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				529689C11EFE4AF000619D6D /* AppDelegate.swift */,
+				52AF63A01F034BCD00CC080F /* ImgTagger-Bridging-Header.h */,
 				529689C81EFE4AF000619D6D /* Assets.xcassets */,
 				529689CA1EFE4AF000619D6D /* LaunchScreen.storyboard */,
 				529689CD1EFE4AF000619D6D /* Info.plist */,
@@ -418,9 +429,12 @@
 				52A221A51F02A0A1000E01FA /* Tag.swift in Sources */,
 				5205DA8D1F029516004DDAE9 /* CircularRevealAnimator.swift in Sources */,
 				52A221A71F02A0F2000E01FA /* ServerPushData.swift in Sources */,
+				52AF639D1F0349D500CC080F /* RegisterViewController.swift in Sources */,
 				5205DA8E1F029516004DDAE9 /* CircularRevealTransitionAnimator.swift in Sources */,
+				52AF639F1F0349DB00CC080F /* LoginViewController.swift in Sources */,
 				52E7B9E01F02985000DF7896 /* User.swift in Sources */,
 				5205DA841F0294F7004DDAE9 /* Constants.swift in Sources */,
+				52DFD89E1F03453A00AA7F12 /* ImgTaggerUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +515,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "ImgTagger/ImgTagger-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -543,6 +558,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "ImgTagger/ImgTagger-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};

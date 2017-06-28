@@ -8,6 +8,8 @@ target 'ImgMaster' do
   pod 'YALSideMenu', '~> 2.0'
   pod "BSImagePicker", "~> 2.4"
   pod 'NVActivityIndicatorView'
+  pod 'NotificationBannerSwift'
+  pod 'Charts'
 
   target 'ImgMasterTests' do
     inherit! :search_paths

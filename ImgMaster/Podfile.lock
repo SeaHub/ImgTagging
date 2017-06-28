@@ -4,7 +4,15 @@ PODS:
   - BSImagePicker (2.6.0):
     - BSGridCollectionViewLayout (~> 1.2.0)
     - UIImageViewModeScaleAspect (= 1.5)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - MarqueeLabel/Swift (3.1.0)
+  - NotificationBannerSwift (1.4.0):
+    - MarqueeLabel/Swift
+    - SnapKit (~> 3.2)
   - NVActivityIndicatorView (3.6.1)
+  - SnapKit (3.2.0)
   - SwiftyJSON (3.1.4)
   - UIImageViewModeScaleAspect (1.5)
   - YALSideMenu (2.0.1)
@@ -12,6 +20,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - BSImagePicker (~> 2.4)
+  - Charts
+  - NotificationBannerSwift
   - NVActivityIndicatorView
   - SwiftyJSON
   - YALSideMenu (~> 2.0)
@@ -20,11 +30,15 @@ SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   BSGridCollectionViewLayout: 8f12c8e1e08c47057f5a39a6828f4395f043d78f
   BSImagePicker: 7b740d0a9f23160bcdca01f179445583bd1c09b0
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  MarqueeLabel: 061d04687ee5485ac035b45c8e292274a87afe01
+  NotificationBannerSwift: b2a81c9f0f816851686ca2e802058afd65676adc
   NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   UIImageViewModeScaleAspect: 11a790a0b9d248a13dc63e3a78991f1463b6d84e
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: d500e9212c103e623bd9a3b424a43831b8ee5f8f
+PODFILE CHECKSUM: ec9f66199a53eafe010d4cd671687e6ad164e799
 
 COCOAPODS: 1.2.1

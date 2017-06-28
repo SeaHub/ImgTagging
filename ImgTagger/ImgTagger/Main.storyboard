@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5XU-bE-SYL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F6o-TC-UVl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -330,10 +330,97 @@
             </objects>
             <point key="canvasLocation" x="959" y="-1021"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nvI-V9-gIZ">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="F6o-TC-UVl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Luy-G0-ojG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lZ4-Kg-WpE" kind="relationship" relationship="rootViewController" id="rD8-HB-zlk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VuQ-oB-vHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2623" y="-2413"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="7Ry-Qb-MKA">
+            <objects>
+                <viewController storyboardIdentifier="kLoginViewControllerIdentifier" id="lZ4-Kg-WpE" customClass="LoginViewController" customModule="ImgTagger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9IU-74-uux"/>
+                        <viewControllerLayoutGuide type="bottom" id="WB7-hA-DgB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0RT-v0-Ict">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign  In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHq-Vs-SN5">
+                                <rect key="frame" x="156" y="28" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLS-DS-Oys">
+                                <rect key="frame" x="164" y="415" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="lZ4-Kg-WpE" eventType="touchUpInside" id="lfI-eI-C0o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6B-gs-EYE">
+                                <rect key="frame" x="153" y="468" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <segue destination="OmZ-s5-kP8" kind="show" id="1q7-ea-Z6W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IZY-5t-1gH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0d-Pa-qJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1802.4000000000001" y="-2413.9430284857572"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="UW2-cY-UJE">
+            <objects>
+                <viewController storyboardIdentifier="kRegisterViewControllerIdentifier" id="OmZ-s5-kP8" customClass="RegisterViewController" customModule="ImgTagger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q8e-2i-BUb"/>
+                        <viewControllerLayoutGuide type="bottom" id="AGb-6u-oz0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JLI-TO-Nyy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0h-Ja-Hty" customClass="Register">
+                                <rect key="frame" x="152" y="20" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fa8-SO-DBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762.39999999999998" y="-2413.04347826087"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="xIV-5p-Cjn">
             <objects>
-                <viewController id="5XU-bE-SYL" customClass="HomeViewController" customModule="ImgTagger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="kHomeViewControllerIdentifier" id="5XU-bE-SYL" customClass="HomeViewController" customModule="ImgTagger" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h6O-se-dFS"/>
                         <viewControllerLayoutGuide type="bottom" id="pkG-vq-jsW"/>
