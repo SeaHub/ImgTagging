@@ -1,27 +1,42 @@
 PODS:
   - Alamofire (4.5.0)
+  - Kingfisher (3.10.2)
+  - MarqueeLabel/Swift (3.1.0)
   - MOBFoundation (3.0.0)
+  - NotificationBannerSwift (1.4.0):
+    - MarqueeLabel/Swift
+    - SnapKit (~> 3.2)
   - NVActivityIndicatorView (3.6.1)
+  - PopupDialog (0.5.4)
   - SMSSDK (3.0.1):
     - MOBFoundation
+  - SnapKit (3.2.0)
   - SwiftyJSON (3.1.4)
   - YALSideMenu (2.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - Kingfisher
+  - NotificationBannerSwift
   - NVActivityIndicatorView
+  - PopupDialog (~> 0.5)
   - SMSSDK
   - SwiftyJSON
   - YALSideMenu (~> 2.0)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
+  MarqueeLabel: 061d04687ee5485ac035b45c8e292274a87afe01
   MOBFoundation: e6572a62983a44fa048c4038842ade1494c10059
+  NotificationBannerSwift: b2a81c9f0f816851686ca2e802058afd65676adc
   NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
+  PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
   SMSSDK: a811c8ea6e89393097037b7cf6493248a40e50f0
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   YALSideMenu: 4d6b90ea44dcdded18a99e46b676e4ad51d9c6bb
 
-PODFILE CHECKSUM: bd648f6d211f0a63121fe178dc053c29b236e1fa
+PODFILE CHECKSUM: cac496fb9a47e620bc5d37dcc8984dea39a0788c
 
 COCOAPODS: 1.2.1

@@ -9,6 +9,8 @@ target 'ImgTagger' do
   pod 'NVActivityIndicatorView'
   pod 'SMSSDK'
   pod 'NotificationBannerSwift'
+  pod 'PopupDialog', '~> 0.5'
+  pod 'Kingfisher'
 
   target 'ImgTaggerTests' do
     inherit! :search_paths

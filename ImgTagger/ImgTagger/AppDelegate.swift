@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+//        APIManager.login(username: "", password: "1234567", success: { (user) in
+//            debugPrint("It works")
+//            UserDefaults.standard.setValue(user.token, forKey: AppConstant.kUserTokenIdentifier)
+//            
+//        }) { (error) in
+//            debugPrint(error)
+//        }
+
+//        self.autoLogin()
+        self.window?.rootViewController = ImgTaggerUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kHomeViewControllerIdentifier)
         return true
+    }
+    
+    private func autoLogin() {
+        ImgTaggerUtil.checkNetworkStatus(reachable: {
+            
+            if let token = ImgTaggerUtil.userToken {
+                APIManager.updateToken(token: token, success: { 
+                    let banner = StatusBarNotificationBanner(title: "Auto login successfully", style: .success)
+                    banner.show()
+                    self.window?.rootViewController = ImgTaggerUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kHomeViewControllerIdentifier)
+                    
+                }, failure: { (error) in
+                    let banner = StatusBarNotificationBanner(title: "Need to relogin", style: .warning)
+                    banner.show()
+                })
+                
+            } else {
+                let banner = StatusBarNotificationBanner(title: "Need to login", style: .warning)
+                banner.show()
+            }
+            
+        }) {
+            let banner = StatusBarNotificationBanner(title: "Network Break!", style: .danger)
+            banner.show()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

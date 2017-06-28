@@ -11,6 +11,7 @@ import UIKit
 struct ConstantStoryboardSegue {
     static let kPresentSideMenuViewSegue        = "kPresentSideMenuViewSegue"
     static let kEmbedNavigationControllerSegue  = "kEmbedNavigationControllerSegue"
+    static let kShowTaggingViewControllerSegue  = "kShowTaggingViewControllerSegue"
 }
 
 struct ConstantStroyboardIdentifier {

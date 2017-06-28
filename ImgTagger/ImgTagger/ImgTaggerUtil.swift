@@ -40,7 +40,7 @@ class ImgTaggerUtil: NSObject {
         return UIStoryboard(name: "Main", bundle: nil)
     }
     
-    public class var userToken: String! {
-        return UserDefaults.standard.object(forKey: AppConstant.kUserTokenIdentifier) as! String
+    public class var userToken: String? {
+        return UserDefaults.standard.object(forKey: AppConstant.kUserTokenIdentifier) as! String?
     }
 }
