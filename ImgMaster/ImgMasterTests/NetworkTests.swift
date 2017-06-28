@@ -13,7 +13,7 @@ import Alamofire
 
 class NetworkTests: XCTestCase {
     let kExceptionWaitingTime = 5.0
-    let kAdminAccountUsername = "Admin"   // Need to be filled with
+    let kAdminAccountUsername = ""   // Need to be filled with
     let kAdminAccountPassword = "123456"  // Need to be filled with
     
     

@@ -464,4 +464,26 @@ class APIManager: NSObject {
             }
         }
     }
+    
+    // MARK: - Statistics
+    public class func getDiagramStatistics(success: ((_ diagramStatistics: DiagramStatistics) -> ())?,
+                                           failure: ((_ error: Error) -> ())?) {
+        
+        Alamofire.request("\(kBaseURL)/statistics", method: .get, encoding: JSONEncoding.default).validate(statusCode: 200 ..< 300).responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                if let success = success {
+                    let json = JSON(value)
+                    let data = json[APIJSONParsingKeys.kDataKey].dictionary!
+                    let diagramStatistics = DiagramStatistics(JSON: data)
+                    success(diagramStatistics)
+                }
+            case .failure(let error):
+                debugPrint(error)
+                if let failure = failure {
+                    failure(error)
+                }
+            }
+        }
+    }
 }

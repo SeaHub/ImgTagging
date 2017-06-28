@@ -16,6 +16,10 @@
 		5205DA901F029516004DDAE9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5205DA8A1F029516004DDAE9 /* MenuViewController.swift */; };
 		5205DA911F029516004DDAE9 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5205DA8B1F029516004DDAE9 /* UITableViewCell.swift */; };
 		5205DA941F029566004DDAE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5205DA931F029566004DDAE9 /* Main.storyboard */; };
+		526D734C1F03D06D00B6CB78 /* TaggedPushedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D734B1F03D06D00B6CB78 /* TaggedPushedData.swift */; };
+		526D73501F03D44100B6CB78 /* Hobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D734F1F03D44100B6CB78 /* Hobby.swift */; };
+		529422A21F0415C2009BC9C6 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529422A11F0415C2009BC9C6 /* Score.swift */; };
+		529422A41F041CA7009BC9C6 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529422A31F041CA7009BC9C6 /* UserInfo.swift */; };
 		529689C21EFE4AF000619D6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529689C11EFE4AF000619D6D /* AppDelegate.swift */; };
 		529689C91EFE4AF000619D6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 529689C81EFE4AF000619D6D /* Assets.xcassets */; };
 		529689CC1EFE4AF000619D6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529689CA1EFE4AF000619D6D /* LaunchScreen.storyboard */; };
@@ -53,6 +57,10 @@
 		5205DA8A1F029516004DDAE9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5205DA8B1F029516004DDAE9 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		5205DA931F029566004DDAE9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		526D734B1F03D06D00B6CB78 /* TaggedPushedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggedPushedData.swift; sourceTree = "<group>"; };
+		526D734F1F03D44100B6CB78 /* Hobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hobby.swift; sourceTree = "<group>"; };
+		529422A11F0415C2009BC9C6 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		529422A31F041CA7009BC9C6 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		529689BE1EFE4AF000619D6D /* ImgTagger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgTagger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529689C11EFE4AF000619D6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		529689C81EFE4AF000619D6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,9 +207,13 @@
 			isa = PBXGroup;
 			children = (
 				52A221A41F02A0A1000E01FA /* Tag.swift */,
+				529422A31F041CA7009BC9C6 /* UserInfo.swift */,
 				52E7B9DF1F02985000DF7896 /* User.swift */,
 				52A221A81F02A146000E01FA /* Image.swift */,
 				52A221A61F02A0F2000E01FA /* ServerPushData.swift */,
+				526D734B1F03D06D00B6CB78 /* TaggedPushedData.swift */,
+				526D734F1F03D44100B6CB78 /* Hobby.swift */,
+				529422A11F0415C2009BC9C6 /* Score.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -419,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526D734C1F03D06D00B6CB78 /* TaggedPushedData.swift in Sources */,
 				529689C21EFE4AF000619D6D /* AppDelegate.swift in Sources */,
 				5205DA8F1F029516004DDAE9 /* HomeViewController.swift in Sources */,
 				5205DA901F029516004DDAE9 /* MenuViewController.swift in Sources */,
@@ -426,10 +439,13 @@
 				5205DA911F029516004DDAE9 /* UITableViewCell.swift in Sources */,
 				52A221A91F02A146000E01FA /* Image.swift in Sources */,
 				5205DA8C1F029516004DDAE9 /* AnimationDelegate.swift in Sources */,
+				529422A41F041CA7009BC9C6 /* UserInfo.swift in Sources */,
 				52A221A51F02A0A1000E01FA /* Tag.swift in Sources */,
 				5205DA8D1F029516004DDAE9 /* CircularRevealAnimator.swift in Sources */,
 				52A221A71F02A0F2000E01FA /* ServerPushData.swift in Sources */,
 				52AF639D1F0349D500CC080F /* RegisterViewController.swift in Sources */,
+				526D73501F03D44100B6CB78 /* Hobby.swift in Sources */,
+				529422A21F0415C2009BC9C6 /* Score.swift in Sources */,
 				5205DA8E1F029516004DDAE9 /* CircularRevealTransitionAnimator.swift in Sources */,
 				52AF639F1F0349DB00CC080F /* LoginViewController.swift in Sources */,
 				52E7B9E01F02985000DF7896 /* User.swift in Sources */,
