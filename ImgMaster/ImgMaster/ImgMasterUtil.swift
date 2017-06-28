@@ -26,23 +26,33 @@ class ImgMasterUtil: NSObject {
         return img
     }
     
-    public class func checkNetworkStatus() {
+    public class func checkNetworkStatus(reachable:(() -> ())?, notReachable:(() -> ())?) {
         let manager = NetworkReachabilityManager(host: "http://114.115.152.250:8080")
         
         manager?.listener = { status in
             switch status {
             case .notReachable:
-                debugPrint("Network Not Reachable")
+                fallthrough
             case .unknown:
-                debugPrint("Network Unknown")
+                if let notReachable = notReachable {
+                    notReachable()
+                    manager?.stopListening()
+                }
             case .reachable(NetworkReachabilityManager.ConnectionType.ethernetOrWiFi):
-                debugPrint("Network In EthernetOrWiFi")
+                fallthrough
             case .reachable(NetworkReachabilityManager.ConnectionType.wwan):
-                debugPrint("Network In WWAN")
+                if let reachable = reachable {
+                    reachable()
+                    manager?.stopListening()
+                }
             }
         }
         
         manager?.startListening()
+    }
+    
+    public class var mainStoryborad: UIStoryboard! {
+        return UIStoryboard(name: "Main", bundle: nil)
     }
     
     public class var userToken: String! {

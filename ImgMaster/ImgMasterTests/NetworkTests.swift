@@ -61,6 +61,29 @@ class NetworkTests: XCTestCase {
         
         wait(for: [exception], timeout: kExceptionWaitingTime * 2)
     }
+    
+    func testLogout() {
+        let exception = XCTestExpectation(description: "Waiting")
+        
+        APIManager.login(username: kAdminAccountUsername, password: kAdminAccountPassword, success: { (user) in
+            
+            APIManager.logout(token: user.token, success: {
+                exception.fulfill()
+                
+            }, failure: { (error) in
+                exception.fulfill()
+                debugPrint(error.localizedDescription)
+                XCTAssert(false)
+            })
+            
+        }) { (error) in
+            exception.fulfill()
+            debugPrint(error.localizedDescription)
+            XCTAssert(false)
+        }
+        
+        wait(for: [exception], timeout: kExceptionWaitingTime)
+    }
 
     // MARK: - Admin Management
     func testGetUserInfo() {

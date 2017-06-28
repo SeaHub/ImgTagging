@@ -55,6 +55,34 @@ class APIManager: NSObject {
         }
     }
     
+    /// 通用 - 登出
+    ///
+    /// - Parameters:
+    ///   - token: 令牌
+    ///   - success: 成功回调函数
+    ///   - failure: 失败回调函数
+    public class func logout(token: String,
+                             success: (() -> ())?,
+                             failure: ((_ error: Error) -> ())?) {
+        let headers = [
+            "Authorization": "Bearer \(token)"
+        ]
+        
+        Alamofire.request("\(kBaseURL)/logout", method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200 ..< 300).responseJSON { (response) in
+            switch response.result {
+            case .success(_):
+                if let success = success {
+                    success()
+                }
+            case .failure(let error):
+                debugPrint(error)
+                if let failure = failure {
+                    failure(error)
+                }
+            }
+        }
+    }
+    
     /// 通用 - 更新令牌
     ///
     /// - Parameters:

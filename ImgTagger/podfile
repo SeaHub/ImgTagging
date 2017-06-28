@@ -8,6 +8,7 @@ target 'ImgTagger' do
   pod 'YALSideMenu', '~> 2.0'
   pod 'NVActivityIndicatorView'
   pod 'SMSSDK'
+  pod 'NotificationBannerSwift'
 
   target 'ImgTaggerTests' do
     inherit! :search_paths
