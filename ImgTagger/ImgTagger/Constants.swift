@@ -9,9 +9,10 @@
 import UIKit
 
 struct ConstantStoryboardSegue {
-    static let kPresentSideMenuViewSegue        = "kPresentSideMenuViewSegue"
-    static let kEmbedNavigationControllerSegue  = "kEmbedNavigationControllerSegue"
-    static let kShowTaggingViewControllerSegue  = "kShowTaggingViewControllerSegue"
+    static let kPresentSideMenuViewSegue           = "kPresentSideMenuViewSegue"
+    static let kEmbedNavigationControllerSegue     = "kEmbedNavigationControllerSegue"
+    static let kShowTaggingViewControllerSegue     = "kShowTaggingViewControllerSegue"
+    static let kShowCompletionViewControllerSegue  = "kShowCompletionViewControllerSegue"
 }
 
 struct ConstantStroyboardIdentifier {
@@ -26,4 +27,10 @@ struct ConstantStroyboardIdentifier {
 
 struct AppConstant {
     static let kUserTokenIdentifier = "kUserTokenIdentifier"
+}
+
+struct ConstantUITableViewCellIdentifier {
+    static let kImageViewTableViewCellIdentifier = "kImageViewTableViewCellIdentifier"
+    static let kLabelTableViewCellIdentifier     = "kLabelTableViewCellIdentifier"
+    static let kTextFieldTableViewCellIdentifier = "kTextFieldTableViewCellIdentifier"
 }

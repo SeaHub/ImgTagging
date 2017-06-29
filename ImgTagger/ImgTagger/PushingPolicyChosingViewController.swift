@@ -10,10 +10,10 @@ import UIKit
 import PopupDialog
 import NotificationBannerSwift
 
-enum PushingPolicy {
-    case sequently
-    case onHobbies
-    case onScores
+enum PushingPolicy: Int {
+    case sequently = 0
+    case onHobbies = 1
+    case onScores  = 2
 }
 
 class PushingPolicyChosingViewController: UIViewController, UIGestureRecognizerDelegate {
@@ -31,6 +31,7 @@ class PushingPolicyChosingViewController: UIViewController, UIGestureRecognizerD
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.addGestures()
+        self.checkNetworkStatus()
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,5 +78,12 @@ class PushingPolicyChosingViewController: UIViewController, UIGestureRecognizerD
         }
         alert.addButtons([confirmButton, cancelButton])
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ConstantStoryboardSegue.kShowTaggingViewControllerSegue {
+            let taggingViewController           = segue.destination as! TaggingViewController
+            taggingViewController.pushingPolicy = self.pushingPolicy
+        }
     }
 }

@@ -128,7 +128,7 @@ class APIManager: NSObject {
     ///   - success: 成功回调函数
     ///   - failure: 失败回调函数
     public class func updateToken(token: String,
-                                success: (() -> ())?,
+                                success: ((_ newToken: String) -> ())?,
                                 failure: ((_ error: Error) -> ())?) {
         let headers = [
             "Authorization": "Bearer \(token)"
@@ -136,9 +136,12 @@ class APIManager: NSObject {
         
         Alamofire.request("\(kBaseURL)/updateToken", method: .put, parameters: nil, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200 ..< 300).responseJSON { (response) in
             switch response.result {
-            case .success(_):
+            case .success(let value):
                 if let success = success {
-                    success()
+                    let json  = JSON(value)
+                    let data  = json[APIJSONParsingKeys.kDataKey].dictionary!
+                    let token = data["token"]!.string!
+                    success(token)
                 }
             case .failure(let error):
                 debugPrint(error)

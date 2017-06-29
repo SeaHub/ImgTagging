@@ -17,12 +17,12 @@ class ImgTaggerUtil: NSObject {
         manager?.listener = { status in
             switch status {
             case .notReachable:
-                fallthrough
-            case .unknown:
                 if let notReachable = notReachable {
                     notReachable()
                     manager?.stopListening()
                 }
+            case .unknown:
+                fallthrough
             case .reachable(NetworkReachabilityManager.ConnectionType.ethernetOrWiFi):
                 fallthrough
             case .reachable(NetworkReachabilityManager.ConnectionType.wwan):

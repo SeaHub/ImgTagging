@@ -19,6 +19,9 @@
 		5205DA941F029566004DDAE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5205DA931F029566004DDAE9 /* Main.storyboard */; };
 		526D734C1F03D06D00B6CB78 /* TaggedPushedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D734B1F03D06D00B6CB78 /* TaggedPushedData.swift */; };
 		526D73501F03D44100B6CB78 /* Hobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D734F1F03D44100B6CB78 /* Hobby.swift */; };
+		526F07EA1F049AF3002608A1 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F07E91F049AF3002608A1 /* ImageTableViewCell.swift */; };
+		526F07EC1F049B06002608A1 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F07EB1F049B06002608A1 /* TextFieldTableViewCell.swift */; };
+		526F07EE1F049B0D002608A1 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F07ED1F049B0D002608A1 /* LabelTableViewCell.swift */; };
 		528A27BE1F04410600C1F182 /* TaggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A27BD1F04410600C1F182 /* TaggingViewController.swift */; };
 		529422A21F0415C2009BC9C6 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529422A11F0415C2009BC9C6 /* Score.swift */; };
 		529422A41F041CA7009BC9C6 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529422A31F041CA7009BC9C6 /* UserInfo.swift */; };
@@ -62,6 +65,9 @@
 		5205DA931F029566004DDAE9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		526D734B1F03D06D00B6CB78 /* TaggedPushedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggedPushedData.swift; sourceTree = "<group>"; };
 		526D734F1F03D44100B6CB78 /* Hobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hobby.swift; sourceTree = "<group>"; };
+		526F07E91F049AF3002608A1 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		526F07EB1F049B06002608A1 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		526F07ED1F049B0D002608A1 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
 		528A27BD1F04410600C1F182 /* TaggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggingViewController.swift; sourceTree = "<group>"; };
 		529422A11F0415C2009BC9C6 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		529422A31F041CA7009BC9C6 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -160,14 +166,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		5205DA961F02963A004DDAE9 /* Tools */ = {
+		5205DA961F02963A004DDAE9 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
 				52D239B41F0296FA002E0945 /* APIManager.swift */,
 				5205DA811F0294F7004DDAE9 /* Constants.swift */,
 				52DFD89D1F03453A00AA7F12 /* ImgTaggerUtil.swift */,
 			);
-			name = Tools;
+			name = Tool;
 			sourceTree = "<group>";
 		};
 		5205DA971F02965A004DDAE9 /* Supporting Files */ = {
@@ -180,6 +186,25 @@
 				529689CD1EFE4AF000619D6D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		526F07E71F049AD2002608A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				526F07E81F049ADB002608A1 /* Cell */,
+				5205DA931F029566004DDAE9 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		526F07E81F049ADB002608A1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				526F07E91F049AF3002608A1 /* ImageTableViewCell.swift */,
+				526F07EB1F049B06002608A1 /* TextFieldTableViewCell.swift */,
+				526F07ED1F049B0D002608A1 /* LabelTableViewCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		529689B51EFE4AF000619D6D = {
@@ -205,9 +230,9 @@
 		529689C01EFE4AF000619D6D /* ImgTagger */ = {
 			isa = PBXGroup;
 			children = (
-				5205DA931F029566004DDAE9 /* Main.storyboard */,
+				526F07E71F049AD2002608A1 /* View */,
 				52E7B9DE1F02982900DF7896 /* Model */,
-				5205DA961F02963A004DDAE9 /* Tools */,
+				5205DA961F02963A004DDAE9 /* Tool */,
 				5205DA951F029631004DDAE9 /* Controller */,
 				5205DA921F02953D004DDAE9 /* SideMenu */,
 				5205DA971F02965A004DDAE9 /* Supporting Files */,
@@ -456,12 +481,15 @@
 				526D734C1F03D06D00B6CB78 /* TaggedPushedData.swift in Sources */,
 				5201924A1F0435E3001A057D /* PushingPolicyChosingViewController.swift in Sources */,
 				529689C21EFE4AF000619D6D /* AppDelegate.swift in Sources */,
+				526F07EC1F049B06002608A1 /* TextFieldTableViewCell.swift in Sources */,
 				5205DA8F1F029516004DDAE9 /* HomeViewController.swift in Sources */,
 				5205DA901F029516004DDAE9 /* MenuViewController.swift in Sources */,
 				52D239B51F0296FA002E0945 /* APIManager.swift in Sources */,
+				526F07EA1F049AF3002608A1 /* ImageTableViewCell.swift in Sources */,
 				5205DA911F029516004DDAE9 /* UITableViewCell.swift in Sources */,
 				52A221A91F02A146000E01FA /* Image.swift in Sources */,
 				5205DA8C1F029516004DDAE9 /* AnimationDelegate.swift in Sources */,
+				526F07EE1F049B0D002608A1 /* LabelTableViewCell.swift in Sources */,
 				529422A41F041CA7009BC9C6 /* UserInfo.swift in Sources */,
 				528A27BE1F04410600C1F182 /* TaggingViewController.swift in Sources */,
 				52A221A51F02A0A1000E01FA /* Tag.swift in Sources */,

@@ -45,7 +45,7 @@ class NetworkTests: XCTestCase {
         
         APIManager.login(username: kUserAccountUsername, password: kUserAccountPassword, success: { (user) in
             
-            APIManager.updateToken(token: user.token, success: { 
+            APIManager.updateToken(token: user.token, success: { (newToken) in
                 exception.fulfill()
                 
             }, failure: { (error) in

@@ -17,24 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        APIManager.login(username: "", password: "1234567", success: { (user) in
-//            debugPrint("It works")
+//        APIManager.login(username: "18933932386", password: "1234567", success: { (user) in
+//            debugPrint("Token: \(user.token)")
 //            UserDefaults.standard.setValue(user.token, forKey: AppConstant.kUserTokenIdentifier)
+//            self.window?.rootViewController = ImgTaggerUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kHomeViewControllerIdentifier)
 //            
 //        }) { (error) in
 //            debugPrint(error)
 //        }
 
-//        self.autoLogin()
-        self.window?.rootViewController = ImgTaggerUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kHomeViewControllerIdentifier)
+        self.autoLogin()
+        
         return true
     }
     
     private func autoLogin() {
         ImgTaggerUtil.checkNetworkStatus(reachable: {
-            
+            debugPrint("oldToken: \(ImgTaggerUtil.userToken!)")
             if let token = ImgTaggerUtil.userToken {
-                APIManager.updateToken(token: token, success: { 
+                APIManager.updateToken(token: token, success: { (newToken) in
+                    UserDefaults.standard.setValue(newToken, forKey: AppConstant.kUserTokenIdentifier)
+                    debugPrint("newToken: \(newToken)")
                     let banner = StatusBarNotificationBanner(title: "Auto login successfully", style: .success)
                     banner.show()
                     self.window?.rootViewController = ImgTaggerUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kHomeViewControllerIdentifier)
