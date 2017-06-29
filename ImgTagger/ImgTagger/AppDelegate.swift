@@ -17,17 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        APIManager.login(username: "18933932386", password: "1234567", success: { (user) in
-//            debugPrint("Token: \(user.token)")
-//            UserDefaults.standard.setValue(user.token, forKey: AppConstant.kUserTokenIdentifier)
-//            self.window?.rootViewController = ImgTaggerUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kHomeViewControllerIdentifier)
-//            
-//        }) { (error) in
-//            debugPrint(error)
-//        }
-
         self.autoLogin()
-        
         return true
     }
     

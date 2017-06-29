@@ -17,6 +17,9 @@
 		5205DA901F029516004DDAE9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5205DA8A1F029516004DDAE9 /* MenuViewController.swift */; };
 		5205DA911F029516004DDAE9 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5205DA8B1F029516004DDAE9 /* UITableViewCell.swift */; };
 		5205DA941F029566004DDAE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5205DA931F029566004DDAE9 /* Main.storyboard */; };
+		52173CA51F051C0F0036FC10 /* AMInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52173CA31F051C0F0036FC10 /* AMInputView.swift */; };
+		52173CA61F051C0F0036FC10 /* AMInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52173CA41F051C0F0036FC10 /* AMInputView.xib */; };
+		52173CAD1F051E420036FC10 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52173CAC1F051E420036FC10 /* AuthenticationViewController.swift */; };
 		526D734C1F03D06D00B6CB78 /* TaggedPushedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D734B1F03D06D00B6CB78 /* TaggedPushedData.swift */; };
 		526D73501F03D44100B6CB78 /* Hobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D734F1F03D44100B6CB78 /* Hobby.swift */; };
 		526F07EA1F049AF3002608A1 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F07E91F049AF3002608A1 /* ImageTableViewCell.swift */; };
@@ -63,6 +66,10 @@
 		5205DA8A1F029516004DDAE9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5205DA8B1F029516004DDAE9 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		5205DA931F029566004DDAE9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		52173CA31F051C0F0036FC10 /* AMInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMInputView.swift; sourceTree = "<group>"; };
+		52173CA41F051C0F0036FC10 /* AMInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMInputView.xib; sourceTree = "<group>"; };
+		52173CAB1F051E030036FC10 /* ImgTagger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImgTagger-Bridging-Header.h"; sourceTree = "<group>"; };
+		52173CAC1F051E420036FC10 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		526D734B1F03D06D00B6CB78 /* TaggedPushedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggedPushedData.swift; sourceTree = "<group>"; };
 		526D734F1F03D44100B6CB78 /* Hobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hobby.swift; sourceTree = "<group>"; };
 		526F07E91F049AF3002608A1 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,7 +91,6 @@
 		52A221A81F02A146000E01FA /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		52AF639C1F0349D500CC080F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		52AF639E1F0349DB00CC080F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		52AF63A01F034BCD00CC080F /* ImgTagger-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ImgTagger-Bridging-Header.h"; sourceTree = "<group>"; };
 		52D239B41F0296FA002E0945 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		52D239B61F029757002E0945 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		52DFD89D1F03453A00AA7F12 /* ImgTaggerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgTaggerUtil.swift; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 			children = (
 				52AF639C1F0349D500CC080F /* RegisterViewController.swift */,
 				52AF639E1F0349DB00CC080F /* LoginViewController.swift */,
+				52173CAC1F051E420036FC10 /* AuthenticationViewController.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -179,8 +186,8 @@
 		5205DA971F02965A004DDAE9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				52173CAB1F051E030036FC10 /* ImgTagger-Bridging-Header.h */,
 				529689C11EFE4AF000619D6D /* AppDelegate.swift */,
-				52AF63A01F034BCD00CC080F /* ImgTagger-Bridging-Header.h */,
 				529689C81EFE4AF000619D6D /* Assets.xcassets */,
 				529689CA1EFE4AF000619D6D /* LaunchScreen.storyboard */,
 				529689CD1EFE4AF000619D6D /* Info.plist */,
@@ -188,9 +195,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		52173CA21F051C0F0036FC10 /* AMInputView */ = {
+			isa = PBXGroup;
+			children = (
+				52173CA31F051C0F0036FC10 /* AMInputView.swift */,
+				52173CA41F051C0F0036FC10 /* AMInputView.xib */,
+			);
+			path = AMInputView;
+			sourceTree = "<group>";
+		};
 		526F07E71F049AD2002608A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52173CA21F051C0F0036FC10 /* AMInputView */,
 				526F07E81F049ADB002608A1 /* Cell */,
 				5205DA931F029566004DDAE9 /* Main.storyboard */,
 			);
@@ -331,6 +348,7 @@
 					529689BD1EFE4AF000619D6D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6A657LNQ4S;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					529689D11EFE4AF100619D6D = {
@@ -366,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5205DA941F029566004DDAE9 /* Main.storyboard in Resources */,
+				52173CA61F051C0F0036FC10 /* AMInputView.xib in Resources */,
 				529689CC1EFE4AF000619D6D /* LaunchScreen.storyboard in Resources */,
 				529689C91EFE4AF000619D6D /* Assets.xcassets in Resources */,
 			);
@@ -478,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52173CA51F051C0F0036FC10 /* AMInputView.swift in Sources */,
 				526D734C1F03D06D00B6CB78 /* TaggedPushedData.swift in Sources */,
 				5201924A1F0435E3001A057D /* PushingPolicyChosingViewController.swift in Sources */,
 				529689C21EFE4AF000619D6D /* AppDelegate.swift in Sources */,
@@ -500,6 +520,7 @@
 				529422A21F0415C2009BC9C6 /* Score.swift in Sources */,
 				5205DA8E1F029516004DDAE9 /* CircularRevealTransitionAnimator.swift in Sources */,
 				52AF639F1F0349DB00CC080F /* LoginViewController.swift in Sources */,
+				52173CAD1F051E420036FC10 /* AuthenticationViewController.swift in Sources */,
 				52E7B9E01F02985000DF7896 /* User.swift in Sources */,
 				5205DA841F0294F7004DDAE9 /* Constants.swift in Sources */,
 				52DFD89E1F03453A00AA7F12 /* ImgTaggerUtil.swift in Sources */,
@@ -637,11 +658,14 @@
 			baseConfigurationReference = 86EA894D1878E093EB56261B /* Pods-ImgTagger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6A657LNQ4S;
 				INFOPLIST_FILE = ImgTagger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Seahub.ImgTagger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImgTagger/ImgTagger-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -651,11 +675,13 @@
 			baseConfigurationReference = 3F3C56CFE857E28C31A589F4 /* Pods-ImgTagger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6A657LNQ4S;
 				INFOPLIST_FILE = ImgTagger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Seahub.ImgTagger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImgTagger/ImgTagger-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
