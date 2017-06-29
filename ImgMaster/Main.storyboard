@@ -324,7 +324,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImgMaster" translatesAutoresizingMaskIntoConstraints="NO" id="3Pd-ck-a3V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="3Pd-ck-a3V">
                                 <rect key="frame" x="100.5" y="126.5" width="174" height="174"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="174" id="W6n-GD-iSk"/>
@@ -371,7 +371,7 @@
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="L6h-s5-LcT" firstAttribute="centerX" secondItem="F64-WB-ua3" secondAttribute="centerX" id="45s-dB-QFw"/>
                             <constraint firstItem="lCW-p8-l52" firstAttribute="centerX" secondItem="F64-WB-ua3" secondAttribute="centerX" id="L0g-Su-JVV"/>
@@ -486,7 +486,7 @@
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fA0-p1-mCa" firstAttribute="centerX" secondItem="8Lk-qT-Ggr" secondAttribute="centerX" id="lK3-Rn-Ti1"/>
                             <constraint firstItem="fA0-p1-mCa" firstAttribute="top" secondItem="avX-5s-Ar0" secondAttribute="bottom" constant="15" id="ufh-e5-XKO"/>
@@ -526,7 +526,7 @@
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Wmd-ii-5Up" firstAttribute="centerX" secondItem="P0g-Tk-reC" secondAttribute="centerX" id="tax-BI-LeB"/>
                             <constraint firstItem="Wmd-ii-5Up" firstAttribute="top" secondItem="58L-DG-0PQ" secondAttribute="bottom" constant="15" id="wcL-pN-hKj"/>
@@ -565,7 +565,7 @@
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Upload" translatesAutoresizingMaskIntoConstraints="NO" id="pyr-7q-5aY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upload" translatesAutoresizingMaskIntoConstraints="NO" id="pyr-7q-5aY">
                                 <rect key="frame" x="87.5" y="196.5" width="200" height="174"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ONj-Pr-YVG"/>
@@ -579,7 +579,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="drP-Yo-GBQ" firstAttribute="top" secondItem="pyr-7q-5aY" secondAttribute="bottom" constant="30" id="INj-mc-caW"/>
                             <constraint firstItem="acM-hl-7wc" firstAttribute="centerX" secondItem="HHo-3X-TBv" secondAttribute="centerX" id="NlX-Vc-7r6"/>
@@ -600,12 +600,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ImgMaster" width="174" height="174"/>
-        <image name="Upload" width="114" height="87"/>
+        <image name="icon" width="180" height="180"/>
         <image name="icon-2" width="39" height="39"/>
         <image name="icon-3" width="41" height="30"/>
         <image name="icon-4" width="28" height="47"/>
         <image name="icon-5" width="36" height="32"/>
         <image name="menu" width="44" height="44"/>
+        <image name="upload" width="114" height="87"/>
     </resources>
 </document>

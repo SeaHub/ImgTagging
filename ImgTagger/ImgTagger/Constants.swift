@@ -9,20 +9,21 @@
 import UIKit
 
 struct ConstantStoryboardSegue {
-    static let kPresentSideMenuViewSegue           = "kPresentSideMenuViewSegue"
-    static let kEmbedNavigationControllerSegue     = "kEmbedNavigationControllerSegue"
-    static let kShowTaggingViewControllerSegue     = "kShowTaggingViewControllerSegue"
-    static let kShowCompletionViewControllerSegue  = "kShowCompletionViewControllerSegue"
+    static let kPresentSideMenuViewSegue                = "kPresentSideMenuViewSegue"
+    static let kEmbedNavigationControllerSegue          = "kEmbedNavigationControllerSegue"
+    static let kShowTaggingViewControllerSegue          = "kShowTaggingViewControllerSegue"
+    static let kShowCompletionViewControllerSegue       = "kShowCompletionViewControllerSegue"
+    static let kShowPasswordResetingViewControllerSegue = "kShowPasswordResetingViewControllerSegue"
+    static let kShowNameChangingViewControllerSegue     = "kShowNameChangingViewControllerSegue"
+    static let kShowHobbiesChangingViewControllerSegue  = "kShowHobbiesChangingViewControllerSegue"
 }
 
 struct ConstantStroyboardIdentifier {
     static let kHomeViewControllerIdentifier             = "kHomeViewControllerIdentifier"
     static let kMainViewControllerIdentifier             = "kMainViewControllerIdentifier"
-    static let kUploadViewControllerIdentifier           = "kUploadViewControllerIdentifier"
-    static let kGalleryViewControllerIdentifier          = "kGalleryViewControllerIdentifier"
     static let kAboutUsViewControllerIdentifier          = "kAboutUsViewControllerIdentifier"
-    static let kLoginViewControllerIdentifier            = "kLoginViewControllerIdentifier"
-    static let kRegisterViewControllerIdentifier         = "kRegisterViewControllerIdentifier"
+    static let kSettingViewControllerIdentifier          = "kSettingViewControllerIdentifier"
+    static let kAuthenticationViewControllerIdentifier   = "kAuthenticationViewControllerIdentifier"
 }
 
 struct AppConstant {
@@ -30,7 +31,14 @@ struct AppConstant {
 }
 
 struct ConstantUITableViewCellIdentifier {
-    static let kImageViewTableViewCellIdentifier = "kImageViewTableViewCellIdentifier"
-    static let kLabelTableViewCellIdentifier     = "kLabelTableViewCellIdentifier"
-    static let kTextFieldTableViewCellIdentifier = "kTextFieldTableViewCellIdentifier"
+    static let kImageViewTableViewCellIdentifier     = "kImageViewTableViewCellIdentifier"
+    static let kLabelTableViewCellIdentifier         = "kLabelTableViewCellIdentifier"
+    static let kTextFieldTableViewCellIdentifier     = "kTextFieldTableViewCellIdentifier"
+    static let kNormalUITableViewCellIdentifier      = "kNormalUITableViewCellIdentifier"
+    // Following static cells means not reuse
+    static let kStaticSettingAvatarTableViewCell        = "kStaticSettingAvatarTableViewCell"
+    static let kStaticSettingResetPasswordTableViewCell = "kStaticSettingResetPasswordTableViewCell"
+    static let kStaticSettingChangeNameTableViewCell    = "kStaticSettingChangeNameTableViewCell"
+    static let kStaticSettingChangeHobbiesTableViewCell = "kStaticSettingChangeHobbiesTableViewCell"
+    static let kStaticLogoutTableViewCell               = "kStaticLogoutTableViewCell"
 }

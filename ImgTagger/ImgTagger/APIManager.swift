@@ -162,7 +162,7 @@ class APIManager: NSObject {
                              success: (() -> ())?,
                              failure: ((_ error: Error) -> ())?) { // Need to filled Phone
         
-        SMSSDK.getVerificationCode(by: SMSGetCodeMethodSMS, phoneNumber: "", zone: "86") { (error) in
+        SMSSDK.getVerificationCode(by: SMSGetCodeMethodSMS, phoneNumber: phone, zone: "86") { (error) in
             guard error == nil else {
                 if let failure = failure {
                     debugPrint(error!)
@@ -451,9 +451,9 @@ class APIManager: NSObject {
             params["name"] = name
         }
         if let image = avatarImage {
-            let imageData          = UIImagePNGRepresentation(image)
+            let imageData          = UIImageJPEGRepresentation(image, 0.7)
             let base64OfImageData  = imageData!.base64EncodedString()
-            params["avatar"] = "data:image/png;base64,\(base64OfImageData)"
+            params["avatar"] = "data:image/jpeg;base64,\(base64OfImageData)"
         }
         
         Alamofire.request("\(kBaseURL)/modifyInfo", method: .put, parameters: params, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200 ..< 300).responseJSON { (response) in

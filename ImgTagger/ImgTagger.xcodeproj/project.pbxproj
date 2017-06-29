@@ -20,6 +20,13 @@
 		52173CA51F051C0F0036FC10 /* AMInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52173CA31F051C0F0036FC10 /* AMInputView.swift */; };
 		52173CA61F051C0F0036FC10 /* AMInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52173CA41F051C0F0036FC10 /* AMInputView.xib */; };
 		52173CAD1F051E420036FC10 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52173CAC1F051E420036FC10 /* AuthenticationViewController.swift */; };
+		52183B521F055703003BEB93 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52183B511F055703003BEB93 /* SettingViewController.swift */; };
+		52183B541F05624D003BEB93 /* SettingAvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52183B531F05624D003BEB93 /* SettingAvatarTableViewCell.swift */; };
+		52183B561F05716C003BEB93 /* PasswordResetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52183B551F05716C003BEB93 /* PasswordResetingViewController.swift */; };
+		52183B591F0576F1003BEB93 /* NameChangingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52183B581F0576F1003BEB93 /* NameChangingViewController.swift */; };
+		52183B5B1F057FE1003BEB93 /* HobbyChangingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52183B5A1F057FE1003BEB93 /* HobbyChangingViewController.swift */; };
+		52183B5D1F058A7C003BEB93 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52183B5C1F058A7C003BEB93 /* AboutUsViewController.swift */; };
+		52183B5F1F059114003BEB93 /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52183B5E1F059114003BEB93 /* CongratulationViewController.swift */; };
 		526D734C1F03D06D00B6CB78 /* TaggedPushedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D734B1F03D06D00B6CB78 /* TaggedPushedData.swift */; };
 		526D73501F03D44100B6CB78 /* Hobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D734F1F03D44100B6CB78 /* Hobby.swift */; };
 		526F07EA1F049AF3002608A1 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F07E91F049AF3002608A1 /* ImageTableViewCell.swift */; };
@@ -35,8 +42,6 @@
 		52A221A51F02A0A1000E01FA /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A221A41F02A0A1000E01FA /* Tag.swift */; };
 		52A221A71F02A0F2000E01FA /* ServerPushData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A221A61F02A0F2000E01FA /* ServerPushData.swift */; };
 		52A221A91F02A146000E01FA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A221A81F02A146000E01FA /* Image.swift */; };
-		52AF639D1F0349D500CC080F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF639C1F0349D500CC080F /* RegisterViewController.swift */; };
-		52AF639F1F0349DB00CC080F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AF639E1F0349DB00CC080F /* LoginViewController.swift */; };
 		52D239B51F0296FA002E0945 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D239B41F0296FA002E0945 /* APIManager.swift */; };
 		52D239B71F029757002E0945 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D239B61F029757002E0945 /* NetworkTests.swift */; };
 		52DFD89E1F03453A00AA7F12 /* ImgTaggerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DFD89D1F03453A00AA7F12 /* ImgTaggerUtil.swift */; };
@@ -70,6 +75,13 @@
 		52173CA41F051C0F0036FC10 /* AMInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMInputView.xib; sourceTree = "<group>"; };
 		52173CAB1F051E030036FC10 /* ImgTagger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImgTagger-Bridging-Header.h"; sourceTree = "<group>"; };
 		52173CAC1F051E420036FC10 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		52183B511F055703003BEB93 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		52183B531F05624D003BEB93 /* SettingAvatarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingAvatarTableViewCell.swift; sourceTree = "<group>"; };
+		52183B551F05716C003BEB93 /* PasswordResetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetingViewController.swift; sourceTree = "<group>"; };
+		52183B581F0576F1003BEB93 /* NameChangingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameChangingViewController.swift; sourceTree = "<group>"; };
+		52183B5A1F057FE1003BEB93 /* HobbyChangingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HobbyChangingViewController.swift; sourceTree = "<group>"; };
+		52183B5C1F058A7C003BEB93 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		52183B5E1F059114003BEB93 /* CongratulationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
 		526D734B1F03D06D00B6CB78 /* TaggedPushedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggedPushedData.swift; sourceTree = "<group>"; };
 		526D734F1F03D44100B6CB78 /* Hobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hobby.swift; sourceTree = "<group>"; };
 		526F07E91F049AF3002608A1 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,8 +101,6 @@
 		52A221A41F02A0A1000E01FA /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		52A221A61F02A0F2000E01FA /* ServerPushData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerPushData.swift; sourceTree = "<group>"; };
 		52A221A81F02A146000E01FA /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		52AF639C1F0349D500CC080F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		52AF639E1F0349DB00CC080F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52D239B41F0296FA002E0945 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		52D239B61F029757002E0945 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		52DFD89D1F03453A00AA7F12 /* ImgTaggerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImgTaggerUtil.swift; sourceTree = "<group>"; };
@@ -135,8 +145,6 @@
 		520192471F04358A001A057D /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				52AF639C1F0349D500CC080F /* RegisterViewController.swift */,
-				52AF639E1F0349DB00CC080F /* LoginViewController.swift */,
 				52173CAC1F051E420036FC10 /* AuthenticationViewController.swift */,
 			);
 			name = Authentication;
@@ -166,9 +174,12 @@
 		5205DA951F029631004DDAE9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				52183B571F05716F003BEB93 /* Setting */,
 				520192481F0435B8001A057D /* Tag */,
 				520192471F04358A001A057D /* Authentication */,
 				5205DA891F029516004DDAE9 /* HomeViewController.swift */,
+				52183B5C1F058A7C003BEB93 /* AboutUsViewController.swift */,
+				52183B5E1F059114003BEB93 /* CongratulationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -204,6 +215,17 @@
 			path = AMInputView;
 			sourceTree = "<group>";
 		};
+		52183B571F05716F003BEB93 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				52183B511F055703003BEB93 /* SettingViewController.swift */,
+				52183B551F05716C003BEB93 /* PasswordResetingViewController.swift */,
+				52183B581F0576F1003BEB93 /* NameChangingViewController.swift */,
+				52183B5A1F057FE1003BEB93 /* HobbyChangingViewController.swift */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 		526F07E71F049AD2002608A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +242,7 @@
 				526F07E91F049AF3002608A1 /* ImageTableViewCell.swift */,
 				526F07EB1F049B06002608A1 /* TextFieldTableViewCell.swift */,
 				526F07ED1F049B0D002608A1 /* LabelTableViewCell.swift */,
+				52183B531F05624D003BEB93 /* SettingAvatarTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -497,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52183B5B1F057FE1003BEB93 /* HobbyChangingViewController.swift in Sources */,
 				52173CA51F051C0F0036FC10 /* AMInputView.swift in Sources */,
 				526D734C1F03D06D00B6CB78 /* TaggedPushedData.swift in Sources */,
 				5201924A1F0435E3001A057D /* PushingPolicyChosingViewController.swift in Sources */,
@@ -504,6 +528,7 @@
 				526F07EC1F049B06002608A1 /* TextFieldTableViewCell.swift in Sources */,
 				5205DA8F1F029516004DDAE9 /* HomeViewController.swift in Sources */,
 				5205DA901F029516004DDAE9 /* MenuViewController.swift in Sources */,
+				52183B541F05624D003BEB93 /* SettingAvatarTableViewCell.swift in Sources */,
 				52D239B51F0296FA002E0945 /* APIManager.swift in Sources */,
 				526F07EA1F049AF3002608A1 /* ImageTableViewCell.swift in Sources */,
 				5205DA911F029516004DDAE9 /* UITableViewCell.swift in Sources */,
@@ -514,15 +539,18 @@
 				528A27BE1F04410600C1F182 /* TaggingViewController.swift in Sources */,
 				52A221A51F02A0A1000E01FA /* Tag.swift in Sources */,
 				5205DA8D1F029516004DDAE9 /* CircularRevealAnimator.swift in Sources */,
+				52183B591F0576F1003BEB93 /* NameChangingViewController.swift in Sources */,
+				52183B5D1F058A7C003BEB93 /* AboutUsViewController.swift in Sources */,
 				52A221A71F02A0F2000E01FA /* ServerPushData.swift in Sources */,
-				52AF639D1F0349D500CC080F /* RegisterViewController.swift in Sources */,
+				52183B521F055703003BEB93 /* SettingViewController.swift in Sources */,
 				526D73501F03D44100B6CB78 /* Hobby.swift in Sources */,
+				52183B561F05716C003BEB93 /* PasswordResetingViewController.swift in Sources */,
 				529422A21F0415C2009BC9C6 /* Score.swift in Sources */,
 				5205DA8E1F029516004DDAE9 /* CircularRevealTransitionAnimator.swift in Sources */,
-				52AF639F1F0349DB00CC080F /* LoginViewController.swift in Sources */,
 				52173CAD1F051E420036FC10 /* AuthenticationViewController.swift in Sources */,
 				52E7B9E01F02985000DF7896 /* User.swift in Sources */,
 				5205DA841F0294F7004DDAE9 /* Constants.swift in Sources */,
+				52183B5F1F059114003BEB93 /* CongratulationViewController.swift in Sources */,
 				52DFD89E1F03453A00AA7F12 /* ImgTaggerUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

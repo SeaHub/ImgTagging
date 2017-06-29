@@ -18,14 +18,13 @@ enum PushingPolicy: Int {
 
 class PushingPolicyChosingViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    @IBOutlet weak var pushingSequentlyView: UIView!
-    @IBOutlet weak var pushingOnHobbiesView: UIView!
-    @IBOutlet weak var pushingOnScoresView: UIView!
+    @IBOutlet weak var pushingSequentlyView: UIImageView!
+    @IBOutlet weak var pushingOnHobbiesView: UIImageView!
+    @IBOutlet weak var pushingOnScoresView: UIImageView!
     private var pushingPolicy: PushingPolicy = .sequently
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
     
     override func viewDidAppear(_ animated: Bool) {

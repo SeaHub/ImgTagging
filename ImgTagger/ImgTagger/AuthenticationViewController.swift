@@ -156,8 +156,8 @@ class AuthenticationViewController: UIViewController {
     }
     
     
-    //MARK: - keyboard
-    func keyboarFrameChange(notification: NSNotification){
+    // MARK: - keyboard
+    func keyboarFrameChange(notification: NSNotification) {
         
         let userInfo = notification.userInfo as! [String: AnyObject]
         
@@ -199,8 +199,6 @@ class AuthenticationViewController: UIViewController {
         
         loginButton.alpha = keyboardShow ? 1:0.7
         signupButton.alpha = keyboardShow ? 1:0.7
-        
-        
         
         // animate constraints changes
         UIView.beginAnimations(nil, context: nil)
