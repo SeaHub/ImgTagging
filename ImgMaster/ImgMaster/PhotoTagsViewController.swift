@@ -114,11 +114,14 @@ class PhotoTagsViewController: UIViewController, UITableViewDelegate, UITableVie
             if let imageURLString = self.photo.url {
                 let httpURL       = "http://\(imageURLString)?imageView2/1/w/\(Int(cell.cellImageView.bounds.width))/h/\(Int(cell.cellImageView.bounds.height))"
                 let url           = URL(string: httpURL)
+                self.indicatorStartAnimating()
                 _                 = cell.cellImageView.kf.setImage(with: url,
-                                                            placeholder: nil,
-                                                            options: [.transition(ImageTransition.fade(1))],
-                                                            progressBlock: nil,
-                                                            completionHandler: nil)
+                                                                   placeholder: nil,
+                                                                   options: [.transition(ImageTransition.fade(1))],
+                                                                   progressBlock: nil,
+                                                                   completionHandler: { (_, _, _, _) in
+                    self.indicatorStopAnimating()
+                })
             }
             return cell
             

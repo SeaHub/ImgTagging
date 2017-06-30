@@ -30,18 +30,10 @@ class PushingPolicyChosingViewController: UIViewController, UIGestureRecognizerD
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.addGestures()
-        self.checkNetworkStatus()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    private func checkNetworkStatus() {
-        ImgTaggerUtil.checkNetworkStatus(reachable: nil) {
-            let banner = StatusBarNotificationBanner(title: "Network Break!", style: .danger)
-            banner.show()
-        }
     }
     
     private func addGestures() {

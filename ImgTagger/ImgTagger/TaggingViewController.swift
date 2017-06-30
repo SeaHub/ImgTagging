@@ -34,10 +34,16 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureIndicator()
+        self.configureTableView()
+    }
+    
+    private func configureTableView() {
+        let tableVC = UITableViewController.init(style: .plain)
+        tableVC.tableView = self.tableView
+        self.addChildViewController(tableVC)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.checkNetworkStatus()
         self.getPushData()
         super.viewWillAppear(animated)
     }
@@ -66,13 +72,6 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.indicator.startAnimating()
     }
     
-    private func checkNetworkStatus() {
-        ImgTaggerUtil.checkNetworkStatus(reachable: nil) {
-            let banner = StatusBarNotificationBanner(title: "Network Break!", style: .danger)
-            banner.show()
-        }
-    }
-    
     private func getPushData() {
         switch self.pushingPolicy ?? .sequently {
         case .sequently:
@@ -88,7 +87,7 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         debugPrint("getPushDataSequently")
         
         self.indicatorStartAnimating()
-        APIManager.getServerPushedDataSequently(token: ImgTaggerUtil.userToken!, number: 100, success: { (pushedDatas) in
+        APIManager.getServerPushedDataSequently(token: ImgTaggerUtil.userToken!, number: 10, success: { (pushedDatas) in
             self.indicatorStopAnimating()
             if let pushedDatas = pushedDatas {
                 self.pushedDatas = pushedDatas
@@ -115,7 +114,7 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         debugPrint("getPushDataOnHobbies")
         
         self.indicatorStartAnimating()
-        APIManager.getServerPushedDataOnHobbies(token: ImgTaggerUtil.userToken!, number: 100, success: { (pushedDatas) in
+        APIManager.getServerPushedDataOnHobbies(token: ImgTaggerUtil.userToken!, number: 10, success: { (pushedDatas) in
             self.indicatorStopAnimating()
             if let pushedDatas = pushedDatas {
                 self.pushedDatas = pushedDatas
@@ -139,7 +138,7 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         debugPrint("getPushDataOnScores")
         
         self.indicatorStartAnimating()
-        APIManager.getServerPushedDataOnScores(token: ImgTaggerUtil.userToken!, number: 100, minPoint: .levelEE, success: { (pushedDatas) in
+        APIManager.getServerPushedDataOnScores(token: ImgTaggerUtil.userToken!, number: 10, minPoint: .levelEE, success: { (pushedDatas) in
             self.indicatorStopAnimating()
             if let pushedDatas = pushedDatas {
                 self.pushedDatas = pushedDatas
@@ -169,13 +168,14 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         if indexPath.row == 0 {
             let imageTableViewCell: ImageTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: ConstantUITableViewCellIdentifier.kImageViewTableViewCellIdentifier, for: indexPath) as! ImageTableViewCell
             if let currentData = self.currentData, let imageURL = currentData.imageURL {
-                let url = URL(string: "http://\(imageURL)")!
-                debugPrint(url)
+                let url = URL(string: "http://\(imageURL)?imageView2/1/w/304/h/270")!
+                self.indicatorStartAnimating()
                 _ = imageTableViewCell.cellImageView.kf.setImage(with: url,
-                                                          placeholder: nil,
-                                                              options: [.transition(ImageTransition.fade(1))],
-                                                        progressBlock: nil,
-                                                    completionHandler: nil)
+                                                                 placeholder: nil,
+                                                                 options: [.transition(ImageTransition.fade(1))], progressBlock: nil,
+                                                                 completionHandler: { (_, _, _, _) in
+                                                                    self.indicatorStopAnimating()
+                })
             }
             return imageTableViewCell
         
@@ -257,8 +257,39 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
                     self.indicatorStopAnimating()
                     self.showErrorAlert()
                 })
-                
             }
+        }
+    }
+    
+    @IBAction func addButtonClicked(_ sender: Any) {
+        if self.currentTaggingIndex < self.pushedDatas.count - 1 {
+            if let currentData = self.currentData, let images = currentData.images,
+                let _ = images.first, let answer = self.userCustomAnswerTextField.text {
+                
+                let taggedData = TaggedPushedData(imageID: currentData.imageID, tagName: answer)
+                self.resultDatas.append(taggedData)
+                self.userCustomAnswerTextField.text = ""
+            }
+            
+            self.currentTaggingIndex += 1
+            debugPrint("\(self.currentTaggingIndex) / \(self.pushedDatas.count)")
+            self.currentData          = self.pushedDatas[self.currentTaggingIndex]
+            UIView.transition(with: self.tableView,
+                              duration: 0.35,
+                              options: .transitionCrossDissolve,
+                              animations: { self.tableView.reloadData() })
+            
+        } else {
+            self.indicatorStartAnimating()
+            APIManager.tagPushedData(token: ImgTaggerUtil.userToken!, tags: self.resultDatas, success: {
+                debugPrint(self.resultDatas)
+                self.indicatorStopAnimating()
+                self.performSegue(withIdentifier: ConstantStoryboardSegue.kShowCompletionViewControllerSegue, sender: self)
+                
+            }, failure: { (error) in
+                self.indicatorStopAnimating()
+                self.showErrorAlert()
+            })
         }
     }
     

@@ -10,31 +10,6 @@ import UIKit
 import Alamofire
 
 class ImgTaggerUtil: NSObject {
-    
-    public class func checkNetworkStatus(reachable:(() -> ())?, notReachable:(() -> ())?) {
-        let manager = NetworkReachabilityManager(host: "http://114.115.152.250:8080")
-        
-        manager?.listener = { status in
-            switch status {
-            case .notReachable:
-                if let notReachable = notReachable {
-                    notReachable()
-                    manager?.stopListening()
-                }
-            case .unknown:
-                fallthrough
-            case .reachable(NetworkReachabilityManager.ConnectionType.ethernetOrWiFi):
-                fallthrough
-            case .reachable(NetworkReachabilityManager.ConnectionType.wwan):
-                if let reachable = reachable {
-                    reachable()
-                    manager?.stopListening()
-                }
-            }
-        }
-        
-        manager?.startListening()
-    }
 
     public class var mainStoryborad: UIStoryboard! {
         return UIStoryboard(name: "Main", bundle: nil)
@@ -42,5 +17,13 @@ class ImgTaggerUtil: NSObject {
     
     public class var userToken: String? {
         return UserDefaults.standard.object(forKey: AppConstant.kUserTokenIdentifier) as! String?
+    }
+    
+    public class func makeImageToSize(image: UIImage, newSize: CGSize) -> UIImage {
+        UIGraphicsBeginImageContext(newSize)
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
     }
 }

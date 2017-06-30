@@ -451,10 +451,12 @@ class APIManager: NSObject {
             params["name"] = name
         }
         if let image = avatarImage {
-            let imageData          = UIImageJPEGRepresentation(image, 0.7)
+            let newImage           = ImgTaggerUtil.makeImageToSize(image: image, newSize: CGSize(width: 200, height: 200))
+            let imageData          = UIImagePNGRepresentation(newImage)
             let base64OfImageData  = imageData!.base64EncodedString()
-            params["avatar"] = "data:image/jpeg;base64,\(base64OfImageData)"
+            params["avatar"] = "data:image/png;base64,\(base64OfImageData)"
         }
+    
         
         Alamofire.request("\(kBaseURL)/modifyInfo", method: .put, parameters: params, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200 ..< 300).responseJSON { (response) in
             switch response.result {

@@ -10,6 +10,7 @@ import UIKit
 import Photos
 import BSImagePicker
 import NVActivityIndicatorView
+import PopupDialog
 
 class ImageUploadViewController: UIViewController {
 
@@ -85,7 +86,11 @@ class ImageUploadViewController: UIViewController {
                 
                 self.uploadImagesInBackground(images: self.selectedUploadImages, completionHandler: { (errors) in
                     if errors.count > 0 {
-                        debugPrint((errors.first)!) // TODO: show msg
+                        debugPrint((errors.first)!)
+                        let alert         = PopupDialog(title: "Tips", message: "Upload Successfully!", image: nil)
+                        let cancelButton  = CancelButton(title: "OK") { }
+                        alert.addButtons([cancelButton])
+                        self.present(alert, animated: true, completion: nil)
                     }
                     self.indicatorStopAnimating()
                 })

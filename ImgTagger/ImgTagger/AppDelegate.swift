@@ -24,28 +24,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func autoLogin() {
-        ImgTaggerUtil.checkNetworkStatus(reachable: {
-            if let token = ImgTaggerUtil.userToken {
-                APIManager.updateToken(token: token, success: { (newToken) in
+        
+        if let token = ImgTaggerUtil.userToken {
+            APIManager.updateToken(token: token, success: { (newToken) in
                     UserDefaults.standard.setValue(newToken, forKey: AppConstant.kUserTokenIdentifier)
-                    let banner = StatusBarNotificationBanner(title: "Auto login successfully", style: .success)
-                    banner.show()
-                    UIView.animate(withDuration: 0.5, animations: {
-                        self.window?.rootViewController = ImgTaggerUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kHomeViewControllerIdentifier)
-                    })
-                    
-                }, failure: { (error) in
-                    let banner = StatusBarNotificationBanner(title: "Need to relogin", style: .warning)
-                    banner.show()
-                })
-                
-            } else {
-                let banner = StatusBarNotificationBanner(title: "Need to login", style: .warning)
+                let banner = StatusBarNotificationBanner(title: "Auto login successfully", style: .success)
                 banner.show()
-            }
-            
-        }) {
-            let banner = StatusBarNotificationBanner(title: "Network Break!", style: .danger)
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.window?.rootViewController = ImgTaggerUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kHomeViewControllerIdentifier)
+                })
+                    
+            }, failure: { (error) in
+                let banner = StatusBarNotificationBanner(title: "Need to relogin", style: .warning)
+                banner.show()
+            })
+                
+        } else {
+                let banner = StatusBarNotificationBanner(title: "Need to login", style: .warning)
             banner.show()
         }
     }
