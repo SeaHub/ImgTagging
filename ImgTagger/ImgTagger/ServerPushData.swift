@@ -22,7 +22,7 @@ class ServerPushData: NSObject {
     let imageID: Int!
     let imageURL: String!
     let filename: String!
-    var images: [Image]?
+    var image: Image?
     var createdAt: String? = nil
     var updatedAt: String? = nil
     
@@ -33,15 +33,10 @@ class ServerPushData: NSObject {
         self.createdAt = JSON[ServerPushDataJSONParsingKeys.kCreatedAtKey]!.string
         self.updatedAt = JSON[ServerPushDataJSONParsingKeys.kUpadatedAtKey]!.string
         
-        var imagesArr: [Image] = []
-        if let images = JSON[ServerPushDataJSONParsingKeys.kImageKey]!.array {
-            for aImage in images {
-                let image = Image(JSON: aImage.dictionary!)
-                imagesArr.append(image)
-            }
-            self.images   = imagesArr
+        if let image = JSON[ServerPushDataJSONParsingKeys.kImageKey]!.dictionary {
+            self.image   = Image(JSON: image)
         } else {
-            self.images   = nil
+            self.image   = nil
         }
     }
 }

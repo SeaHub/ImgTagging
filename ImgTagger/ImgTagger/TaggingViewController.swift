@@ -89,6 +89,7 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.indicatorStartAnimating()
         APIManager.getServerPushedDataSequently(token: ImgTaggerUtil.userToken!, number: 10, success: { (pushedDatas) in
             self.indicatorStopAnimating()
+            self.currentTaggingIndex = 0;
             if let pushedDatas = pushedDatas {
                 self.pushedDatas = pushedDatas
                 self.currentData = self.pushedDatas[self.currentTaggingIndex]
@@ -115,9 +116,11 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         self.indicatorStartAnimating()
         APIManager.getServerPushedDataOnHobbies(token: ImgTaggerUtil.userToken!, number: 10, success: { (pushedDatas) in
+            self.currentTaggingIndex = 0;
             self.indicatorStopAnimating()
             if let pushedDatas = pushedDatas {
                 self.pushedDatas = pushedDatas
+                self.currentData = self.pushedDatas[self.currentTaggingIndex]
                 self.tableView.reloadData()
                 
             } else {
@@ -139,9 +142,11 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         self.indicatorStartAnimating()
         APIManager.getServerPushedDataOnScores(token: ImgTaggerUtil.userToken!, number: 10, minPoint: .levelEE, success: { (pushedDatas) in
+            self.currentTaggingIndex = 0;
             self.indicatorStopAnimating()
             if let pushedDatas = pushedDatas {
                 self.pushedDatas = pushedDatas
+                self.currentData = self.pushedDatas[self.currentTaggingIndex]
                 self.tableView.reloadData()
                 
             } else {
@@ -181,8 +186,8 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         } else if indexPath.row >= 1 && indexPath.row <= 5 {
             let labelTableViewCell: LabelTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: ConstantUITableViewCellIdentifier.kLabelTableViewCellIdentifier, for: indexPath) as! LabelTableViewCell
-            if let currentData = self.currentData, let images = currentData.images, let firstData = images.first {
-                labelTableViewCell.cellLabel.text      = "\(self.kDefaultTitles[indexPath.row - 1])\(String(describing: firstData.tagNames[indexPath.row - 1]))"
+            if let currentData = self.currentData, let imageData = currentData.image {
+                labelTableViewCell.cellLabel.text      = "\(self.kDefaultTitles[indexPath.row - 1])\(String(describing: imageData.tagNames[indexPath.row - 1]))"
             } else {
                 labelTableViewCell.cellLabel.text      = ""
             }
@@ -218,7 +223,7 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 return 0
             }
             
-            if let tagNames = self.pushedDatas[self.currentTaggingIndex].images?.first?.tagNames {
+            if let imageData = self.pushedDatas[self.currentTaggingIndex].image, let tagNames = imageData.tagNames {
                 return 1 + tagNames.count + 1
             } else {
                 return 2
@@ -232,9 +237,9 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row >= 1 && indexPath.row <= 5 {
             if self.currentTaggingIndex < self.pushedDatas.count - 1 {
-                if let currentData = self.currentData, let images = currentData.images, let firstData = images.first {
-                    debugPrint(firstData.tagNames[indexPath.row - 1])
-                    let taggedData = TaggedPushedData(imageID: currentData.imageID, tagName: firstData.tagNames[indexPath.row - 1])
+                if let currentData = self.currentData, let imageData = currentData.image {
+                    debugPrint(imageData.tagNames[indexPath.row - 1])
+                    let taggedData = TaggedPushedData(imageID: currentData.imageID, tagName: imageData.tagNames[indexPath.row - 1])
                     self.resultDatas.append(taggedData)
                 }
                 
@@ -263,8 +268,7 @@ class TaggingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func addButtonClicked(_ sender: Any) {
         if self.currentTaggingIndex < self.pushedDatas.count - 1 {
-            if let currentData = self.currentData, let images = currentData.images,
-                let _ = images.first, let answer = self.userCustomAnswerTextField.text {
+            if let currentData = self.currentData, let answer = self.userCustomAnswerTextField.text {
                 
                 let taggedData = TaggedPushedData(imageID: currentData.imageID, tagName: answer)
                 self.resultDatas.append(taggedData)
