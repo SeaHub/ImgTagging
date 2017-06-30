@@ -77,9 +77,9 @@ class AuthenticationViewController: UIViewController {
                 
             } else {
                 UserDefaults.standard.setValue(user.token, forKey: AppConstant.kUserTokenIdentifier)
-                let homeViewController                 = ImgMasterUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kHomeViewControllerIdentifier)
+                let galleryViewController              = ImgMasterUtil.mainStoryborad.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kGalleryViewControllerIdentifier)
                 let appDelegate                        = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = homeViewController
+                appDelegate.window?.rootViewController = galleryViewController
             }
             
         }) { (error) in

@@ -45,12 +45,14 @@ extension HomeViewController: MenuViewControllerDelegate {
         var currentContentController: UIViewController! = nil
         switch index {
         case 0:
-            currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kDigramsViewControllerIdentifier)
+            currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kGalleryViewControllerIdentifier)
         case 1:
             currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kUploadViewControllerIdentifier)
         case 2:
-            currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kGalleryViewControllerIdentifier)
+            currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kUserListViewControllerIdentifier)
         case 3:
+            currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kAdminListViewControllerIdentifier)
+        case 4:
             currentContentController       = storyboard!.instantiateViewController(withIdentifier: ConstantStroyboardIdentifier.kAboutUsViewControllerIdentifier)
             
         default:

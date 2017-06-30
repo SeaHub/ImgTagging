@@ -14,7 +14,7 @@ struct ImageJSONParsingKeys {
     static let kURLKey       = "url"
     static let kFilenameKey  = "filename"
     static let kCreatedAtKey = "created_at"
-    static let kUpdatedAtKey = "update_at"
+    static let kUpdatedAtKey = "updated_at"
 }
 
 class Image: NSObject {

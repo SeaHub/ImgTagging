@@ -22,6 +22,7 @@
 		52355A8A1EFECC9800932E34 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52355A891EFECC9800932E34 /* UserInfo.swift */; };
 		52355A8C1EFED9C300932E34 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52355A8B1EFED9C300932E34 /* UserDetail.swift */; };
 		52355A8E1EFEDBC800932E34 /* Hobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52355A8D1EFEDBC800932E34 /* Hobby.swift */; };
+		523E5FC61F0633EC00FDAEC5 /* CollectionImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E5FC51F0633EC00FDAEC5 /* CollectionImageViewCell.swift */; };
 		525460A01F05F9160092364F /* AMInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5254609E1F05F9160092364F /* AMInputView.swift */; };
 		525460A11F05F9160092364F /* AMInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5254609F1F05F9160092364F /* AMInputView.xib */; };
 		525460A31F05F92C0092364F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525460A21F05F92C0092364F /* AuthenticationViewController.swift */; };
@@ -34,6 +35,9 @@
 		525C50981F04247F00A2CD71 /* RegisterNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C50971F04247F00A2CD71 /* RegisterNumber.swift */; };
 		527EF12E1EFE4D8D00D3DE79 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527EF12D1EFE4D8D00D3DE79 /* APIManager.swift */; };
 		527EF1321EFE4DA600D3DE79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527EF1311EFE4DA600D3DE79 /* Constants.swift */; };
+		529FF2BD1F06483C0006BE73 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FF2BB1F06483C0006BE73 /* ImageTableViewCell.swift */; };
+		529FF2BE1F06483C0006BE73 /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FF2BC1F06483C0006BE73 /* LabelTableViewCell.swift */; };
+		52AD0DF01F063E900064E9CD /* PhotoTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD0DEF1F063E900064E9CD /* PhotoTagsViewController.swift */; };
 		52B2093F1F0181E500E7787B /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2093E1F0181E500E7787B /* ImageUploadViewController.swift */; };
 		52B209411F0181ED00E7787B /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B209401F0181ED00E7787B /* AboutUsViewController.swift */; };
 		52B209431F0181F600E7787B /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B209421F0181F600E7787B /* PhotoGalleryViewController.swift */; };
@@ -45,6 +49,8 @@
 		52E26B5A1EFE52B40079E818 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E26B591EFE52B40079E818 /* NetworkTests.swift */; };
 		52F61A2D1F016ACF00E89D27 /* AnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F61A2C1F016ACF00E89D27 /* AnimationDelegate.swift */; };
 		52F61A2F1F016B5F00E89D27 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F61A2E1F016B5F00E89D27 /* UITableViewCell.swift */; };
+		52FC78311F068523003FE619 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC78301F068523003FE619 /* UserListViewController.swift */; };
+		52FC78331F068539003FE619 /* AdminListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC78321F068539003FE619 /* AdminListViewController.swift */; };
 		5F828C5C5B73DEE7768CB643 /* Pods_ImgMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B180BF088123C6A0F6F738A /* Pods_ImgMaster.framework */; };
 		6501B333732B2D02A78D567D /* Pods_ImgMasterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB91289A2D2EF14309E993D /* Pods_ImgMasterTests.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +81,7 @@
 		52355A891EFECC9800932E34 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		52355A8B1EFED9C300932E34 /* UserDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		52355A8D1EFEDBC800932E34 /* Hobby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hobby.swift; sourceTree = "<group>"; };
+		523E5FC51F0633EC00FDAEC5 /* CollectionImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionImageViewCell.swift; sourceTree = "<group>"; };
 		5254609E1F05F9160092364F /* AMInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMInputView.swift; sourceTree = "<group>"; };
 		5254609F1F05F9160092364F /* AMInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMInputView.xib; sourceTree = "<group>"; };
 		525460A21F05F92C0092364F /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +94,9 @@
 		525C50971F04247F00A2CD71 /* RegisterNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterNumber.swift; sourceTree = "<group>"; };
 		527EF12D1EFE4D8D00D3DE79 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		527EF1311EFE4DA600D3DE79 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		529FF2BB1F06483C0006BE73 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		529FF2BC1F06483C0006BE73 /* LabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelTableViewCell.swift; sourceTree = "<group>"; };
+		52AD0DEF1F063E900064E9CD /* PhotoTagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTagsViewController.swift; sourceTree = "<group>"; };
 		52B2093E1F0181E500E7787B /* ImageUploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
 		52B209401F0181ED00E7787B /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		52B209421F0181F600E7787B /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +112,8 @@
 		52E26B591EFE52B40079E818 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		52F61A2C1F016ACF00E89D27 /* AnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationDelegate.swift; path = ../AnimationDelegate.swift; sourceTree = "<group>"; };
 		52F61A2E1F016B5F00E89D27 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewCell.swift; path = ../UITableViewCell.swift; sourceTree = "<group>"; };
+		52FC78301F068523003FE619 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		52FC78321F068539003FE619 /* AdminListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminListViewController.swift; sourceTree = "<group>"; };
 		6607DEC3BA6ED34917227468 /* Pods-ImgMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImgMaster/Pods-ImgMaster.release.xcconfig"; sourceTree = "<group>"; };
 		6B180BF088123C6A0F6F738A /* Pods_ImgMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImgMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB91289A2D2EF14309E993D /* Pods_ImgMasterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImgMasterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +145,7 @@
 		5254609C1F05F9050092364F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52A72E6A1F06330B00FF0199 /* Cell */,
 				5230A2431F0169FE0060F99A /* Main.storyboard */,
 				5254609D1F05F9160092364F /* AMInputView */,
 			);
@@ -200,6 +213,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		52A72E6A1F06330B00FF0199 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				529FF2BB1F06483C0006BE73 /* ImageTableViewCell.swift */,
+				529FF2BC1F06483C0006BE73 /* LabelTableViewCell.swift */,
+				523E5FC51F0633EC00FDAEC5 /* CollectionImageViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		52AD0DF11F063E930064E9CD /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				52B209421F0181F600E7787B /* PhotoGalleryViewController.swift */,
+				52AD0DEF1F063E900064E9CD /* PhotoTagsViewController.swift */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
 		52D0C4AD1EFE4B1F00E354BF = {
 			isa = PBXGroup;
 			children = (
@@ -258,12 +290,14 @@
 		52F61A321F0172D800E89D27 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				52AD0DF11F063E930064E9CD /* Photos */,
 				525460A21F05F92C0092364F /* AuthenticationViewController.swift */,
 				5230A23F1F0169DA0060F99A /* HomeViewController.swift */,
 				52B2093E1F0181E500E7787B /* ImageUploadViewController.swift */,
 				52B209401F0181ED00E7787B /* AboutUsViewController.swift */,
-				52B209421F0181F600E7787B /* PhotoGalleryViewController.swift */,
 				52B209441F01820100E7787B /* DiagramsViewController.swift */,
+				52FC78301F068523003FE619 /* UserListViewController.swift */,
+				52FC78321F068539003FE619 /* AdminListViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -497,13 +531,18 @@
 				525C50981F04247F00A2CD71 /* RegisterNumber.swift in Sources */,
 				527EF12E1EFE4D8D00D3DE79 /* APIManager.swift in Sources */,
 				52F61A2D1F016ACF00E89D27 /* AnimationDelegate.swift in Sources */,
+				52AD0DF01F063E900064E9CD /* PhotoTagsViewController.swift in Sources */,
 				525460A01F05F9160092364F /* AMInputView.swift in Sources */,
+				523E5FC61F0633EC00FDAEC5 /* CollectionImageViewCell.swift in Sources */,
+				529FF2BD1F06483C0006BE73 /* ImageTableViewCell.swift in Sources */,
 				5230A2411F0169DA0060F99A /* MenuViewController.swift in Sources */,
 				52B209411F0181ED00E7787B /* AboutUsViewController.swift in Sources */,
 				5259B7AA1EFFDA6600B989A3 /* ImageStatisticsResult.swift in Sources */,
 				522DAEA41F0427FE00468367 /* NewTagNumber.swift in Sources */,
+				52FC78331F068539003FE619 /* AdminListViewController.swift in Sources */,
 				522DAEA21F04279000468367 /* NewImageNumber.swift in Sources */,
 				52F61A2F1F016B5F00E89D27 /* UITableViewCell.swift in Sources */,
+				529FF2BE1F06483C0006BE73 /* LabelTableViewCell.swift in Sources */,
 				5259B7A01EFFCEA900B989A3 /* Image.swift in Sources */,
 				525460A31F05F92C0092364F /* AuthenticationViewController.swift in Sources */,
 				522DAEA81F04291A00468367 /* UserTagNumber.swift in Sources */,
@@ -516,6 +555,7 @@
 				52D0C4BA1EFE4B1F00E354BF /* AppDelegate.swift in Sources */,
 				5259B7A41EFFD41C00B989A3 /* ImageResultList.swift in Sources */,
 				52355A881EFEBB1500932E34 /* User.swift in Sources */,
+				52FC78311F068523003FE619 /* UserListViewController.swift in Sources */,
 				52355A8A1EFECC9800932E34 /* UserInfo.swift in Sources */,
 				527EF1321EFE4DA600D3DE79 /* Constants.swift in Sources */,
 				5259B7A21EFFCFC200B989A3 /* ImageList.swift in Sources */,

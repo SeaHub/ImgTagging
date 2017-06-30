@@ -10,6 +10,9 @@ target 'ImgMaster' do
   pod 'NVActivityIndicatorView'
   pod 'NotificationBannerSwift'
   pod 'Charts'
+  pod "BouncyLayout"
+  pod 'Kingfisher'
+  pod 'PopupDialog', '~> 0.5'
 
   target 'ImgMasterTests' do
     inherit! :search_paths

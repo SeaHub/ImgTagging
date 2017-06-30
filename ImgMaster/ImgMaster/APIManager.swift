@@ -297,7 +297,7 @@ class APIManager: NSObject {
     ///   - success: 成功回调函数
     ///   - failure: 失败回调函数
     public class func doStatistics(token: String,
-                                   imageID: String,
+                                   imageID: Int,
                                    success: (() -> ())?,
                                    failure: ((_ error: Error) -> ())?) {
         
@@ -329,7 +329,7 @@ class APIManager: NSObject {
     ///   - success: 成功回调函数
     ///   - failure: 失败回调函数
     public class func getImageStatisticsResult(token: String,
-                                             imageID: String,
+                                             imageID: Int,
                                              success: ((_ imageStatisticsList: ImageStatisticsResultList) -> ())?,
                                              failure: ((_ error: Error) -> ())?) {
         
@@ -365,8 +365,8 @@ class APIManager: NSObject {
     ///   - success: 成功回调函数
     ///   - failure: 失败回调函数
     public class func updateModel(token: String,
-                                  imageID: String,
-                                  tagID: String,
+                                  imageID: Int,
+                                  tagID: Int,
                                   success: (() -> ())?,
                                   failure: ((_ error: Error) -> ())?) {
         
@@ -398,7 +398,7 @@ class APIManager: NSObject {
     ///   - success: 成功回调函数
     ///   - failure: 失败回调函数
     public class func getImageResult(token: String,
-                                   imageID: String,
+                                   imageID: Int,
                                    success: ((_ imageResultList: ImageResultList) -> ())?,
                                    failure: ((_ error: Error) -> ())?) {
         
@@ -441,7 +441,8 @@ class APIManager: NSObject {
             "Authorization": "Bearer \(token)",
         ]
         
-        let imageData          = UIImagePNGRepresentation(image)
+        let newImage           = ImgMasterUtil.makeImageToSize(image: image, newSize: CGSize(width: 200, height: 200))
+        let imageData          = UIImagePNGRepresentation(newImage)
         let base64OfImageData  = imageData!.base64EncodedString()
         
         let params = [

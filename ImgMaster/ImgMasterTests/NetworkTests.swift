@@ -202,7 +202,7 @@ class NetworkTests: XCTestCase {
         
         APIManager.login(username: kAdminAccountUsername, password: kAdminAccountPassword, success: { (user) in
             
-            APIManager.doStatistics(token: user.token, imageID: "1", success: { 
+            APIManager.doStatistics(token: user.token, imageID: 1, success: { 
                 exception.fulfill()
             }, failure: { (error) in
                 exception.fulfill()
@@ -224,7 +224,7 @@ class NetworkTests: XCTestCase {
         
         APIManager.login(username: kAdminAccountUsername, password: kAdminAccountPassword, success: { (user) in
             
-            APIManager.getImageStatisticsResult(token: user.token, imageID: "1", success: { (imageStatisticsResultList) in
+            APIManager.getImageStatisticsResult(token: user.token, imageID: 1, success: { (imageStatisticsResultList) in
                 exception.fulfill()
             }, failure: { (error) in
                 exception.fulfill()
@@ -246,7 +246,7 @@ class NetworkTests: XCTestCase {
         
         APIManager.login(username: kAdminAccountUsername, password: kAdminAccountPassword, success: { (user) in
             
-            APIManager.updateModel(token: user.token, imageID: "1", tagID: "12", success: {
+            APIManager.updateModel(token: user.token, imageID: 1, tagID: 12, success: {
                 exception.fulfill()
             }, failure: { (error) in
                 exception.fulfill()
@@ -268,7 +268,7 @@ class NetworkTests: XCTestCase {
         
         APIManager.login(username: kAdminAccountUsername, password: kAdminAccountPassword, success: { (user) in
             
-            APIManager.getImageResult(token: user.token, imageID: "1", success: { (imageResultList) in
+            APIManager.getImageResult(token: user.token, imageID: 1, success: { (imageResultList) in
                 exception.fulfill()
             }, failure: { (error) in
                 exception.fulfill()
