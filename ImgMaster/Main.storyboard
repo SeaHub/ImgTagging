@@ -1167,6 +1167,7 @@
                     <connections>
                         <outlet property="maskView" destination="DZq-Bv-1xc" id="Ktk-SV-p8k"/>
                         <outlet property="tableView" destination="we9-78-AkF" id="4AJ-wW-T4v"/>
+                        <outlet property="titleLabel" destination="DjB-RS-w5q" id="lL8-9q-fD2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6a-TX-aae" userLabel="First Responder" sceneMemberID="firstResponder"/>

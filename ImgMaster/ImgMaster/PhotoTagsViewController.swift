@@ -21,6 +21,7 @@ class PhotoTagsViewController: UIViewController, UITableViewDelegate, UITableVie
     var photo: Image!
     var style: PhotoTagsViewControllerStyle = .tags
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var maskView: UIView!
     private let indicator = NVActivityIndicatorView(frame: CGRect(x: 100, y: 100, width: 200, height: 100), type: .orbit, color: .white, padding: 0)
@@ -55,6 +56,7 @@ class PhotoTagsViewController: UIViewController, UITableViewDelegate, UITableVie
     private func fetchData() {
         self.indicatorStartAnimating()
         if self.style == .tags {
+            self.titleLabel.text = "User Tags"
             APIManager.getImageStatisticsResult(token: ImgMasterUtil.userToken!, imageID: photo.imageID, success: { (resultList) in
                 self.indicatorStopAnimating()
                 self.statisticsResultList = resultList
@@ -68,6 +70,7 @@ class PhotoTagsViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             
         } else {
+            self.titleLabel.text = "Result Tags"
             APIManager.getImageResult(token: ImgMasterUtil.userToken!, imageID: photo.imageID, success: { (resultList) in
                 self.indicatorStopAnimating()
                 self.resultList       = resultList
@@ -137,10 +140,12 @@ class PhotoTagsViewController: UIViewController, UITableViewDelegate, UITableVie
             case .result:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: ConstantUITableViewCellIdentifier.kLabelTableViewCellIdentifier, for: indexPath) as! LabelTableViewCell
                 
-                if indexPath.row == self.resultDataSource.count {
-                    cell.cellLabel.text = "Update \(String(self.resultList!.alternation)) times totally"
+                if indexPath.row == 1 {
+                    if let resultList = self.resultList, let alternation = resultList.alternation {
+                        cell.cellLabel.text = "Update \(String(alternation)) times totally"
+                    }
                 } else {
-                    cell.cellLabel.text = self.resultDataSource[indexPath.row - 1]
+                    cell.cellLabel.text = self.resultDataSource[indexPath.row - 2]
                 }
                 return cell
             }
@@ -165,7 +170,7 @@ class PhotoTagsViewController: UIViewController, UITableViewDelegate, UITableVie
         case .tags:
             return 1 + self.tagsDataSource.count
         case .result:
-            return 1 + self.resultDataSource.count + 1
+            return 1 + 1 + self.resultDataSource.count
         }
     }
     

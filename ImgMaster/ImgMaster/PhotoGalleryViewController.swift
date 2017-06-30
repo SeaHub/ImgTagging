@@ -17,6 +17,7 @@ class PhotoGalleryViewController: UIViewController {
     @IBOutlet weak var maskView: UIView!
     fileprivate var photos: [Image]       = []
     fileprivate var imageList: ImageList? = nil
+    fileprivate var style: PhotoTagsViewControllerStyle = .tags
     private let indicator = NVActivityIndicatorView(frame: CGRect(x: 100, y: 100, width: 200, height: 100), type: .orbit, color: .white, padding: 0)
     
     lazy var sizes: [CGSize] = {
@@ -91,6 +92,7 @@ class PhotoGalleryViewController: UIViewController {
         if segue.identifier == ConstantStoryboardSegue.kShowPhotoTagControllerSegue {
             let dvc   = segue.destination as! PhotoTagsViewController
             dvc.photo = sender! as! Image
+            dvc.style = self.style
         }
     }
 }
@@ -126,9 +128,12 @@ extension PhotoGalleryViewController: UICollectionViewDelegate {
         APIManager.doStatistics(token: ImgMasterUtil.userToken!, imageID: self.photos[indexPath.row].imageID, success: {
             let alert                = PopupDialog(title: "Tips", message: "What do you want to do?", image: nil)
             let seeCurrentTagsButton = DefaultButton(title: "See current tags") {
+                self.style           = .tags
                 self.performSegue(withIdentifier: ConstantStoryboardSegue.kShowPhotoTagControllerSegue, sender: self.photos[indexPath.row])
             }
+            
             let seeResultButton      = DefaultButton(title: "See result") {
+                self.style           = .result
                 self.performSegue(withIdentifier: ConstantStoryboardSegue.kShowPhotoTagControllerSegue, sender: self.photos[indexPath.row])
             }
             let cancelButton  = CancelButton(title: "CANCEL") { }
