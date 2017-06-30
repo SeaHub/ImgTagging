@@ -14,7 +14,7 @@ import NVActivityIndicatorView
 class ImageUploadViewController: UIViewController {
 
     @IBOutlet weak var uploadImageView: UIImageView!
-    let indicator = NVActivityIndicatorView(frame: CGRect(x: 100, y: 100, width: 200, height: 100), type: .orbit, color: .white, padding: 0)
+    private let indicator = NVActivityIndicatorView(frame: CGRect(x: 100, y: 100, width: 200, height: 100), type: .orbit, color: .white, padding: 0)
     var maskView: UIView?
     var selectedUploadImages: [UIImage] = []
     let group                           = DispatchGroup()

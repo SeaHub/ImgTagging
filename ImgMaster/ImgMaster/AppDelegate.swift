@@ -14,14 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        APIManager.login(username: "", password: "123456", success: { (user) in
-            debugPrint(user.token)
-            // Should be save in keychain
-            UserDefaults.standard.set(user.token, forKey: AppConstant.kUserTokenIdentifier)
-        }, failure: nil)
-                
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {                
         return true
     }
 

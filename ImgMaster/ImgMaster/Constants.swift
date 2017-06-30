@@ -18,6 +18,7 @@ struct ConstantStroyboardIdentifier {
     static let kUploadViewControllerIdentifier  = "kUploadViewControllerIdentifier"
     static let kGalleryViewControllerIdentifier = "kGalleryViewControllerIdentifier"
     static let kAboutUsViewControllerIdentifier = "kAboutUsViewControllerIdentifier"
+    static let kHomeViewControllerIdentifier    = "kHomeViewControllerIdentifier"
 }
 
 struct AppConstant {
