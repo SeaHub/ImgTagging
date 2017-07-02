@@ -1,0 +1,12 @@
+net: "/home/wwwroot/cifar/public/cifar/caffe/examples/alexnet_my/train_val.prototxt"
+test_iter: 100
+test_interval: 500
+base_lr: 0.0001
+momentum: 0.9
+weight_decay: 0.004
+lr_policy: "fixed"
+display: 100
+max_iter: 4000
+snapshot: 200
+snapshot_prefix: "/home/wwwroot/cifar/public/cifar/caffe/examples/alexnet_my/snapshot/mycaffe"
+solver_mode: CPU
